@@ -1,0 +1,4 @@
+XKBLAYOUT=us,gr
+BACKSPACE=guess
+XKBVARIANT=,
+XKBOPTIONS=grp:menu_shift_toggle
