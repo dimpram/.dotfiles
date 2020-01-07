@@ -1,20 +1,20 @@
-" Set compatibility to Vim only.
+" Basic setup
 set nocompatible
-
-" Helps force plug-ins to load correctly when it is turned back on below.
-filetype off
-
-" Turn on syntax highlighting.
 syntax on
+filetype plugin indent on " For plug-ins to load correctly.
 
-" For plug-ins to load correctly.
-filetype plugin indent on
+" Search down into subfolders
+" Provides tab completion for all file related tags
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
 
 " Turn off modelines
 set modelines=0
 
 " Automatically wrap text that extends beyond the screen length.
-set nowrap
+set wrap
 " Vim's auto indentation feature does not work properly with text copied from outside of Vim. Press the <F2> key to toggle paste mode on/off.
 nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O>:set invpaste paste?<CR>
@@ -53,9 +53,12 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " Show line numbers
 set number
+" turn hybrid line numbers on
+set number relativenumber
+set nu rnu
 
 " Set status line display
-" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
 
 " Encoding
 set encoding=utf-8
@@ -82,14 +85,14 @@ autocmd BufWinEnter *.* silent loadview"
 
 " Call the .vimrc.plug file
 if filereadable(expand("~/.vimrc.plug"))
-	source ~/.vimrc.plug
+  source ~/.vimrc.plug
 endif
 
 "NerdTREE + Airline_theme
-map <C-b> :NERDTreeToggle<CR>
-let g:airline_theme='violet'
-colorscheme darkblue
+"map <C-b> :NERDTreeToggle<CR>
+"let g:airline_theme='night_owl'
+" colorscheme darkblue
 
 "Calendar .vim
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
+"let g:calendar_google_calendar = 1
+"let g:calendar_google_task = 1
