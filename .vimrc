@@ -88,8 +88,9 @@ if filereadable(expand("~/.vimrc.plug"))
   source ~/.vimrc.plug
 endif
 
-"NerdTREE + Airline_theme
-"map <C-b> :NERDTreeToggle<CR>
+"NerdTREE
+map <C-b> :NERDTreeToggle<CR>
+"Airline_theme
 "let g:airline_theme='night_owl'
 " colorscheme darkblue
 

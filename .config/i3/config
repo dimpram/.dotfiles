@@ -9,8 +9,8 @@ set $mod Mod4
 #############
 # Font for window titles. Will also be used by the bar unless a different font
 # font pango:monospace 11
-#font pango:DejaVu Sans Mono 11
-font pango: SanFranciscoDisplay-Regular 11
+#font pango:DejaVu Sans Mono 13
+font pango: SanFranciscoDisplay-Regular 12
 
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 ####### exec --no-startup-id nm-applet
@@ -85,16 +85,16 @@ bindsym $mod+a focus parent
 ##################
 #   Workspaces   #
 ##################
-set $ws1 "1 "
-set $ws2 "2 "
-set $ws3 "3 "
-set $ws4 "4 "
+set $ws1 "1 "
+set $ws2 "2 "
+set $ws3 "3 "
+set $ws4 "4 "
 set $ws5 "5 "
 set $ws6 "6 "
 set $ws7 "7 "
 set $ws8 "8 "
-set $ws9 "9 "
-set $ws10 "10 "
+set $ws9 "9 "
+set $ws10 "10 "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -120,6 +120,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# Assignments
+exec --no-startup-id i3-msg 'workspace $ws1; exec firefox; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace $ws2; exec urxvt; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace $ws10; exec nautilus; workspace $ws1'
+#exec --no-startup-id i3-msg 'workspace $ws9; exec spotify; workspace $ws1'
 
 ###################
 #   i3 Controls   #
@@ -173,9 +178,9 @@ bar {
         }
 }
 
-# Suspend to lock state TODO
-bindsym $mod+shift+x exec bash /home/jim/Documents/.scripts/lock.sh # OR default i3 i3lock -> i3lock --color "$bg"
-
+# Suspend to lock state
+#bindsym $mod+shift+x exec bash /home/jim/Documents/.scripts/lock.sh # OR default i3 i3lock -> i3lock --color "$bg"
+exec --no-startup-id xss-lock --transfer-sleep-lock /home/jim/Documents/.scripts/lock.sh
 
 ###############
 #   Fn Keys   #
@@ -191,7 +196,7 @@ bindsym Print exec gnome-screenshot                                             
 #################
 #   Wallpaper   #
 #################
-exec_always feh --bg-scale /home/jim/Pictures/Wallpapers/869.jpg
+exec_always feh --bg-scale /home/jim/Pictures/Wallpapers/city1.jpg
 
 
 #############
