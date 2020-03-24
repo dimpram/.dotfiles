@@ -10,7 +10,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # font pango:monospace 11
 #font pango:DejaVu Sans Mono 13
-font pango: SanFranciscoDisplay-Regular 12
+font pango: SanFranciscoDisplay-Regular 13
 
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 ####### exec --no-startup-id nm-applet
@@ -22,7 +22,7 @@ floating_modifier $mod
 ###############
 #   Terminal  #
 ###############
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 
 #######################
@@ -86,7 +86,7 @@ bindsym $mod+a focus parent
 #   Workspaces   #
 ##################
 set $ws1 "1 "
-set $ws2 "2 "
+set $ws2 "2 "
 set $ws3 "3 "
 set $ws4 "4 "
 set $ws5 "5 "
@@ -126,13 +126,17 @@ exec --no-startup-id i3-msg 'workspace $ws2; exec urxvt; workspace $ws1'
 exec --no-startup-id i3-msg 'workspace $ws10; exec nautilus; workspace $ws1'
 #exec --no-startup-id i3-msg 'workspace $ws9; exec spotify; workspace $ws1'
 
+
 ###################
 #   i3 Controls   #
 ###################
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exit # OR i3 default -> bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exit
 
+# Assignments
+bindsym $mod+shift+f exec firefox
 
 ##############
 #   Resize   #
@@ -182,6 +186,7 @@ bar {
 #bindsym $mod+shift+x exec bash /home/jim/Documents/.scripts/lock.sh # OR default i3 i3lock -> i3lock --color "$bg"
 exec --no-startup-id xss-lock --transfer-sleep-lock /home/jim/Documents/.scripts/lock.sh
 
+
 ###############
 #   Fn Keys   #
 ###############
@@ -196,7 +201,7 @@ bindsym Print exec gnome-screenshot                                             
 #################
 #   Wallpaper   #
 #################
-exec_always feh --bg-scale /home/jim/Pictures/Wallpapers/city1.jpg
+exec_always feh --bg-fill /home/jim/Pictures/minimal.jpg
 
 
 #############
@@ -207,7 +212,7 @@ exec_always feh --bg-scale /home/jim/Pictures/Wallpapers/city1.jpg
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
-set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $fg i3wm.color15 #f0f0f0
 set_from_resource $bg i3wm.color0 #f0f0f0
 
 # class                 border  backgr. text indicator child_border
@@ -221,6 +226,8 @@ client.background       $bg
 
 exec_always wal -R
 
+# Transparency
+# exec_always --no-startup-id picom &
 
 #############
 #   Dmenu   #
