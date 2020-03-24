@@ -22,5 +22,4 @@ source ~/.cache/wal/colors-tty.sh
 ###########
 # Aliases #
 ###########
-alias wifi='nmtui'
-# alias pod='/home/jim/.gem/ruby/2.7.0/bin/pod'
+alias internet='nmtui'
