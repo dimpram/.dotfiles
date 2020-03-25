@@ -23,3 +23,4 @@ source ~/.cache/wal/colors-tty.sh
 # Aliases #
 ###########
 alias internet='nmtui'
+alias ekabapp='cd /home/jim/Documents/Projects/ekab/EkabApp'

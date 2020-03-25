@@ -30,5 +30,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# Start i3
-exec i3
+#Auto start
+udiskie &   # Start udiskie wrapper for udisks2
+exec i3     # Start i3
