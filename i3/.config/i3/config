@@ -242,8 +242,8 @@ bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 for_window [class=".*"] border pixel 2
 
 # Gaps
-set $inner 20
-set $outer 5
+set $inner 10
+set $outer 8
 
 gaps inner $inner
 gaps outer $outer

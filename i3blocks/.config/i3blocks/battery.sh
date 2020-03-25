@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BAT=$(acpi -b | grep -E -o -m 1 '[0-9][0-9]?%')
-STATUS=$(acpi -b | awk '{printf $3}')
+STATUS=$(acpi -b | awk '{print $3;exit;}')
 
 if [[ ${STATUS} == "Discharging," ]]; then
   if [[ ${BAT%?} -le 15 ]]; then
