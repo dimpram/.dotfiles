@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BAT=$(acpi -b | grep -E -o -m 1 '[0-9][0-9]?%')
+BAT=$(acpi -b | grep -E -o -m 1 '[0-9][0-9][0-9]?%')
 STATUS=$(acpi -b | awk '{print $3;exit;}')
 
 if [[ ${STATUS} == "Discharging," ]]; then
@@ -19,8 +19,8 @@ if [[ ${STATUS} == "Discharging," ]]; then
   fi
 elif [[ ${STATUS} == "Charging," ]]; then
   echo " $BAT"
-elif [[ $STATUS == "Full," ]]; then
-  echo "FULL 100%"
+elif [[ ${STATUS} == "Full," ]] || [[ ${STATUS} == "Not" ]]; then
+  echo "FULL $BAT"
 fi
 
 exit 0
