@@ -32,4 +32,5 @@ fi
 
 #Auto start
 udiskie &   # Start udiskie wrapper for udisks2
+picom &     # Start picom compositor for transparency effects
 exec i3     # Start i3

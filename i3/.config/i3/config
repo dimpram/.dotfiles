@@ -22,7 +22,7 @@ floating_modifier $mod
 ###############
 #   Terminal  #
 ###############
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec urxvt
 
 
 #######################
