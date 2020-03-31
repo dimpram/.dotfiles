@@ -13,10 +13,7 @@ set $mod Mod4
 font pango: SanFranciscoDisplay-Regular 13
 
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-####### exec --no-startup-id nm-applet
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+# exec --no-startup-id nm-applet
 
 
 ###############
@@ -28,6 +25,9 @@ bindsym $mod+Return exec urxvt
 #######################
 #   Window managment  #
 #######################
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
 # Moving floating windows to the center of the screen
 for_window [floating] move [absolute] position center
 
