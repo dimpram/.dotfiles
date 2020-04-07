@@ -10,4 +10,4 @@ git clone https://github.com/jimDragon/.dotfiles.git
 cd .dotfiles
 stow *
 ```
-*or stow i3, bash, etc.* if you want a specific config
+*or stow i3, bash, etc. if you want a specific config*
