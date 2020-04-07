@@ -33,3 +33,5 @@ source ~/.cache/wal/colors-tty.sh
 alias ls='ls --color=auto'
 alias internet='nmtui'
 alias ekabapp='cd /home/jim/Documents/Projects/ekab/EkabApp'
+alias mc='cd /home/jim/Documents/ && java -jar Minecraft.jar'
+alias dots='cd /home/jim/.dotfiles/ && ls -a'

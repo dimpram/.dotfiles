@@ -3,7 +3,7 @@ Xft.dpi: 120
 
 !URxvt.font: xft:monospace:size=12
 !URxvt.font: xft:DejaVu Sans Mono:size=12
-URxvt.font: xft:Menlo-Regular:size=11
+URxvt.font: xft:Menlo-Regular:size=13
 URxvt.scrollBar: false
 
 URxvt*background: black
