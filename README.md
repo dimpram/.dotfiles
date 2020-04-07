@@ -8,11 +8,6 @@ Uses GNU Stow – https://www.gnu.org/software/stow/
 cd ~
 git clone https://github.com/jimDragon/.dotfiles.git
 cd .dotfiles
-stow vim
-```
-*or stow i3, bash, etc. or*
-
-```
 stow *
 ```
-*for all of them*
+*or stow i3, bash, etc.* if you want a specific config
