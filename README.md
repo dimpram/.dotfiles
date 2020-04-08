@@ -8,6 +8,7 @@ Uses GNU Stow – https://www.gnu.org/software/stow/
 cd ~
 git clone https://github.com/jimDragon/.dotfiles.git
 cd .dotfiles
+rm README.md
 stow *
 ```
 *or stow i3, bash, etc. if you want a specific config*
