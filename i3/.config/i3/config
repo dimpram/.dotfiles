@@ -10,7 +10,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # font pango:monospace 11
 #font pango:DejaVu Sans Mono 13
-font pango: SanFranciscoDisplay-Regular 13
+font pango: SanFranciscoDisplay-Regular 14
 
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # exec --no-startup-id nm-applet

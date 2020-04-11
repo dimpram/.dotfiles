@@ -31,7 +31,9 @@ source ~/.cache/wal/colors-tty.sh
 # Aliases #
 ###########
 alias ls='ls --color=auto'
-alias internet='nmtui'
-alias ekabapp='cd /home/jim/Documents/Projects/ekab/EkabApp'
+cdls(){ cd $* && ls; }
+alias net='nmtui'
 alias mc='cd /home/jim/Documents/ && java -jar Minecraft.jar'
-alias dots='cd /home/jim/.dotfiles/ && ls -a'
+alias dots='cdls /home/jim/.dotfiles/ && git status'
+alias ekabapp='cdls /home/jim/Documents/Projects/ekab/EkabApp'
+alias rutc='cdls /home/jim/Documents/Projects/rutc/RUTC/ && git status'
