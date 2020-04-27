@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Load screen calibration profile
+/usr/bin/xcalib -d :0 /usr/share/color/icc/asusVS247.icm
+
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
