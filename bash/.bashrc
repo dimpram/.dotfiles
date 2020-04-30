@@ -30,9 +30,12 @@ source ~/.cache/wal/colors-tty.sh
 ###########
 # Aliases #
 ###########
+# Common
 alias ls='ls --color=auto'
-cdls(){ cd $* && ls; }
+alias grep='grep --color'
 alias net='nmtui'
+
+# Custom
 alias mc='cd /home/jim/Documents/ && java -jar Minecraft.jar'
 alias dots='cdls /home/jim/.dotfiles/ && git status'
 alias ekabapp='cdls /home/jim/Documents/Projects/ekab/EkabApp'
