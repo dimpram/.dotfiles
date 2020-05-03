@@ -37,6 +37,6 @@ alias net='nmtui'
 
 # Custom
 alias mc='cd /home/jim/Documents/ && java -jar Minecraft.jar'
-alias dots='cdls /home/jim/.dotfiles/ && git status'
-alias ekabapp='cdls /home/jim/Documents/Projects/ekab/EkabApp'
-alias rutc='cdls /home/jim/Documents/Projects/rutc/RUTC/ && git status'
+alias dots='cd /home/jim/.dotfiles/ && ls && git status'
+alias ekabapp='cd /home/jim/Documents/Projects/ekab/EkabApp && ls'
+alias rutc='cd /home/jim/Documents/Projects/rutc/RUTC/ && ls && git status'
