@@ -16,9 +16,14 @@ set expandtab			" Always uses spaces instead of tab characters
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-"NerdTREE
+" Status bar theme
+let g:airline_theme='fruit_punch'
+
+" NerdTREE
 map <C-b> :NERDTreeToggle<CR>
 
 " coc config

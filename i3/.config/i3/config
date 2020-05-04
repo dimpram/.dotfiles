@@ -19,7 +19,8 @@ font pango: SanFranciscoDisplay-Regular 14
 ###############
 #   Terminal  #
 ###############
-bindsym $mod+Return exec urxvt
+# bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec kitty
 
 
 #######################
@@ -122,7 +123,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assignments
 exec --no-startup-id i3-msg 'workspace $ws1; exec firefox; workspace $ws1'
-exec --no-startup-id i3-msg 'workspace $ws2; exec urxvt; workspace $ws1'
+exec --no-startup-id i3-msg 'workspace $ws2; exec kitty; workspace $ws1'
 exec --no-startup-id i3-msg 'workspace $ws10; exec nautilus; workspace $ws1'
 #exec --no-startup-id i3-msg 'workspace $ws9; exec spotify; workspace $ws1'
 
@@ -165,26 +166,11 @@ bindsym $mod+r mode "resize"
 ###########
 #   Bar   #
 ###########
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-       status_command i3blocks -c /home/jim/.config/i3blocks/i3blocks.conf
-
-  colors {
-    background $bg
-    statusline $fg
-    separator $bg
-    #                  border  backgr. text
-    focused_workspace  $fg $fg $bg
-    active_workspace   $bg $fg $fg
-    inactive_workspace $bg $bg $fg
-    urgent_workspace   #2f343a #900000 #ffffff
-        }
-}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Suspend to lock state
 #bindsym $mod+shift+x exec bash /home/jim/Documents/.scripts/lock.sh # OR default i3 i3lock -> i3lock --color "$bg"
-exec --no-startup-id xss-lock --transfer-sleep-lock /home/jim/.config/i3blocks/lock.sh
+exec --no-startup-id xss-lock --transfer-sleep-lock $HOME/.config/i3blocks/lock.sh
 
 
 ###############
