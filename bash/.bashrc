@@ -32,6 +32,9 @@ source ~/.cache/wal/colors-tty.sh
 ###########
 # Common
 alias ls='ls --color=auto'
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
 alias grep='grep --color'
 alias net='nmtui'
 

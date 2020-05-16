@@ -32,7 +32,7 @@ font-1 = Font Awesome:style=Regular:pixelsize=13
 ;modules-left = bspwm i3
 modules-left = i3
 ;modules-center = i3
-modules-right = pulseaudio memory wlan eth xkeyboard date battery
+modules-right = xkeyboard pulseaudio memory wlan eth date battery
 
 tray-position = right
 tray-padding = 0
