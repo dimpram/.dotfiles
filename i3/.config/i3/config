@@ -8,12 +8,9 @@ set $mod Mod4
 #   Fonts   #
 #############
 # Font for window titles. Will also be used by the bar unless a different font
-# font pango:monospace 11
+#font pango:monospace 11
 #font pango:DejaVu Sans Mono 13
 font pango: SanFranciscoDisplay-Regular 14
-
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-# exec --no-startup-id nm-applet
 
 
 ###############
@@ -21,6 +18,12 @@ font pango: SanFranciscoDisplay-Regular 14
 ###############
 # bindsym $mod+Return exec urxvt
 bindsym $mod+Return exec kitty
+
+
+################
+#  Lock scren  #
+################
+exec --no-startup-id xss-lock --transfer-sleep-lock /home/jim/.config/scripts/lock.sh
 
 
 #######################
@@ -139,6 +142,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Assignments
 bindsym $mod+shift+f exec firefox
 
+
 ##############
 #   Resize   #
 ##############
@@ -168,10 +172,6 @@ bindsym $mod+r mode "resize"
 ###########
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Suspend to lock state
-#bindsym $mod+shift+x exec bash /home/jim/Documents/.scripts/lock.sh # OR default i3 i3lock -> i3lock --color "$bg"
-exec --no-startup-id xss-lock --transfer-sleep-lock $HOME/.config/i3blocks/lock.sh
-
 
 ###############
 #   Fn Keys   #
@@ -187,6 +187,8 @@ bindsym Print exec gnome-screenshot                                             
 #################
 #   Wallpaper   #
 #################
+# This is being handled by pywal. If you want to set custom wallpaper
+# without it then here you go:
 #exec_always feh --bg-fill /home/jim/Pictures/minimal.jpg
 
 
@@ -207,13 +209,9 @@ client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-
 client.background       $bg
-
 exec_always wal -R
 
-# Transparency
-# exec_always --no-startup-id picom &
 
 #############
 #   Dmenu   #
@@ -230,7 +228,6 @@ for_window [class=".*"] border pixel 2
 # Gaps
 set $inner 10
 set $outer 8
-
 gaps inner $inner
 gaps outer $outer
 

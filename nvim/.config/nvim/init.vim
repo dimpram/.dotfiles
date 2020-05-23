@@ -12,6 +12,7 @@ set tabstop=2			" ...
 set shiftwidth=2 	" ...Customization
 set expandtab			" Always uses spaces instead of tab characters
 
+
 " VimPlug
 call plug#begin()
 Plug 'scrooloose/nerdtree'
