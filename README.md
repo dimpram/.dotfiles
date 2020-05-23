@@ -8,7 +8,7 @@ Uses GNU Stow – https://www.gnu.org/software/stow/
 |----------------|---------|
 | Window Manager | [i3-gaps](https://github.com/Airblader/i3) |
 | Terminal       | [kitty](https://github.com/kovidgoyal/kitty)|
-| Editor         | [nvim](https://github.com/neovim/neovim)|
+| Editor         | [nvim Mach-2](https://github.com/ChristianChiarulli/nvim)|
 | Theme          | [pywal](https://github.com/dylanaraps/pywal)|
 
 ## Usage
