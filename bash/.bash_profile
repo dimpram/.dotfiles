@@ -14,3 +14,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Zathura pywal
+export PATH="/home/jim/.local/bin:$PATH"
