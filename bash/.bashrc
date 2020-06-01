@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -39,7 +35,8 @@ alias grep='grep --color'
 alias net='nmtui'
 
 # Custom
-alias mc='cd /home/jim/Documents/ && java -jar Minecraft.jar'
-alias dots='cd /home/jim/.dotfiles/ && ls && git status'
-alias ekabapp='cd /home/jim/Documents/Projects/ekab/EkabApp && ls'
-alias rutc='cd /home/jim/Documents/Projects/rutc/RUTC/ && ls && git status'
+alias mc='cd $HOME/dox/ && java -jar Minecraft.jar'
+alias dots='cd $HOME/.dotfiles/ && ls && git status'
+alias ekabapp='cd $HOME/dox/Projects/ekab/EkabApp && ls'
+alias rutc='cd $HOME/dox/Projects/rutc/RUTC/ && ls && git status'
+alias job='cd $HOME/dox/job/biotech && lla'
