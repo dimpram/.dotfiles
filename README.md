@@ -1,4 +1,7 @@
 # .dotfiles
+
+![dots](dotfiles.png)
+
 These are my system dotfiles, updated for my 2019 Arch setup. 
 
 Uses GNU Stow – https://www.gnu.org/software/stow/
