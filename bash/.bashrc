@@ -37,6 +37,6 @@ alias net='nmtui'
 # Custom
 alias mc='cd $HOME/dox/ && java -jar Minecraft.jar'
 alias dots='cd $HOME/.dotfiles/ && ls && git status'
-alias ekabapp='cd $HOME/dox/Projects/ekab/EkabApp && ls'
-alias rutc='cd $HOME/dox/Projects/rutc/RUTC/ && ls && git status'
+alias ekabcms='cd /srv/http/aed-locator-cms && ls && git status'
+alias rutc='cd $HOME/dox/proj/rutc/RUTC/ && ls && git status'
 alias job='cd $HOME/dox/job/biotech && lla'
