@@ -35,8 +35,10 @@ alias grep='grep --color'
 alias net='nmtui'
 
 # Custom
+alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1'
 alias mc='cd $HOME/dox/ && java -jar Minecraft.jar'
 alias dots='cd $HOME/.dotfiles/ && ls && git status'
-alias ekabcms='cd /srv/http/aed-locator-cms && ls && git status'
-alias rutc='cd $HOME/dox/proj/rutc/RUTC/ && ls && git status'
+alias ekabcms='cd /srv/http/aed-locator-cms && ls && git status && code .'
+alias biotech='cd $HOME/proj/biotech && lla'
+alias rutc='cd $HOME/proj/rutc/RUTC/ && ls && git status && code .'
 alias job='cd $HOME/dox/job/biotech && lla'
