@@ -23,7 +23,7 @@ bindsym $mod+Return exec kitty
 ################
 #  Lock scren  #
 ################
-exec --no-startup-id xss-lock --transfer-sleep-lock /home/jim/.config/scripts/lock.sh
+# exec --no-startup-id xss-lock --transfer-sleep-lock /home/jim/.config/scripts/lock.sh
 
 
 #######################
