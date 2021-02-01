@@ -141,6 +141,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Shortcuts
 bindsym $mod+w exec firefox
+bindsym $mod+n exec nautilus
+bindsym $mod+s exec spotify
 
 
 ##############
