@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#
+# ~/.xinitrc
+#
+
 # Load screen calibration profile
 /usr/bin/xcalib -d :0 /usr/share/color/icc/asusVS247.icm
 
