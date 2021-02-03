@@ -1,7 +1,3 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything (Unix default)
 [[ $- != *i* ]] && return
 

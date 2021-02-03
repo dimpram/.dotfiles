@@ -1,7 +1,3 @@
-!
-! ~/.Xresources
-!
-
 ! Screen scale
 Xft.dpi: 120
 
