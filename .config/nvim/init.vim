@@ -1,4 +1,5 @@
 " Vim quality of life configs
+syntax on         " Syntax highlightinh
 set nu rnu 				" Hybrid lines
 set nowrap				" Disables line wrap
 set splitright    " New split appears on the right

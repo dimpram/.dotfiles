@@ -15,15 +15,15 @@
 set -e                                      # When any command fails the shell immediately shall exit,
 
 # Updating Arch
-printf "\nUpdating Arch\n\n"
+echo -e "\nUpdating Arch\n\n"
 sudo pacman -Syu --noconfirm
 
 # Stowing
 mkdir -p $HOME/.config                      # Make the config folder so stowing everything doesn't just symlink the folder
-rm -f $HOME/.bashrc                         # Sometimes there's a bashrc
+rm -f $HOME/.bashrc $HOME/.bash_profile     # Sometimes there's a bashrc
 sudo pacman -S stow --noconfirm --needed    # Installing stow
 cd $HOME/git
-printf "\nStowing Dotfiles\n\n"
+echo -e "\nStowing Dotfiles\n\n"
 stow .dotfiles                              # Stowing the .dotfiles folder
 
 # Creating filesystem
@@ -33,35 +33,36 @@ do
 done
 
 # Installing AUR Dependencies CHECK IF I NEED THIS
-echo "\nInstalling AUR Dependencies\n\n"
+echo -e "\nInstalling AUR Dependencies\n\n"
 sudo pacman -S --noconfirm vim base-devel --needed  # Installing base-devel if it's not installed already (This package contains everything required to build from the AUR)
 
 # Build all packages
-for PACKAGE in ttf-google-fonts-git
+for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git
 do
   if [ ! -d "$HOME/git/$PACKAGE/" ]
   then
-    printf "\nCloning $PACKAGE\n\n"
+    echo -e "\nCloning $PACKAGE\n\n"
     git clone https://aur.archlinux.org/$PACKAGE.git $HOME/git/$PACKAGE
   fi
 
-  printf "\nBuilding $PACKAGE\n\n"
+  echo -e "\nBuilding $PACKAGE\n\n"
 
   cd $HOME/git/$PACKAGE
   makepkg -si --noconfirm
 done
 
 # Installing packages/dependencies
-echo "\nInstalling Dependencies\n\n"
+echo -e "\nInstalling Dependencies\n\n"
 sudo pacman -S --noconfirm --needed \
-  xorg-server xorg-xinit libx11 libxft \  # Packages used for dwm and dmenu
-  xcalib \                                # For loading custom icc screen profile 
+  xf86-video-fbdev \
+  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft \
+  xcalib \
   neovim \
   openssh \
   htop \
   firefox \
   chromium \
-  urxvt \
+  rxvt-unicode \
   feh \
   vifm \
   pulseaudio \
@@ -76,14 +77,15 @@ sudo pacman -S --noconfirm --needed \
 # systemctl enable ntpd
 
 # Compiling suckless tools
-for tool in dwm dmenu
+for tool in dmenu dwm
 do 
   cd $HOME/.local/src/$tool
   sudo make clean install
 done
 
-# Get zsh environment variables
-source $HOME/.zshrc
+# Get zsh (or bash) environment variables
+# source $HOME/.zshrc
+source $HOME/.bashrc
 
 # Installing development environments
 # NEED Ruby env
