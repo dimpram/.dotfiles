@@ -50,7 +50,7 @@ cd $HOME/git
 stow .dotfiles                              # Stowing the .dotfiles folder
 
 # Creating filesystem
-for dir in dox dls pix cell
+for dir in dox dls cell
 do
   mkdir -p $HOME/$dir
 done
