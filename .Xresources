@@ -1,11 +1,11 @@
 ! Screen scale
 Xft.dpi: 120
 
-! URxvt.font: xft:monospace:size=12
+! URxvt Customization
 URxvt.font: xft:Menlo-Regular:size=13
 URxvt.scrollBar: false
 URxvt.underlineURLs: true
-URxvt.internalBorder: 20
+URxvt.internalBorder: 35
 
 ! Colors
 ! hard contrast: *background: #1d2021

@@ -44,7 +44,7 @@ setfont ter-v32n
 # Stowing
 echo -e "\nStowing Dotfiles\n"
 mkdir -p $HOME/.config                      # Make the config folder so stowing everything doesn't just symlink the folder
-rm -f $HOME/.bashrc $HOME/.bash_profile     # Sometimes there's a bashrc
+rm -f $HOME/.bashrc $HOME/.bash_profile     # Sometimes there's a bashrc or a bash_profile
 sudo pacman -S stow --noconfirm --needed    # Installing stow
 cd $HOME/git
 stow .dotfiles                              # Stowing the .dotfiles folder
@@ -102,7 +102,7 @@ sudo pacman -S --noconfirm --needed \
 # systemctl enable ntpd
 
 # Compiling suckless tools
-for tool in st dmenu dwm
+for tool in dmenu dwm
 do 
   cd $HOME/.local/src/$tool
   sudo make clean install

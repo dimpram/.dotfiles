@@ -1,0 +1,7 @@
+{
+    "window.zoomLevel": 2,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": true,
+    "window.menuBarVisibility": "toggle",
+    "workbench.colorTheme": "Gruvbox Material Dark"
+}
