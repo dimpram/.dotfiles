@@ -38,5 +38,8 @@ fi
 # Load screen calibration profile
 # /usr/bin/xcalib -d :0 $HOME/.config/asusVS247.icm
 
+# Start statusbar
+exec slstatus &
+
 # Start window manager
 exec dwm

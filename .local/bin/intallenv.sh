@@ -102,7 +102,7 @@ sudo pacman -S --noconfirm --needed \
 # systemctl enable ntpd
 
 # Compiling suckless tools
-for tool in dmenu dwm
+for tool in dmenu slstatus dwm
 do 
   cd $HOME/.local/src/$tool
   sudo make clean install
