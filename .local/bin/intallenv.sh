@@ -120,4 +120,7 @@ source $HOME/.zsh
 # Return home so new shells open at home
 cd $HOME
 
+# Setting wallpaper
+feh --bg-fill ~/pix/wals/gruv.jpg
+
 startx
