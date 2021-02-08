@@ -60,7 +60,7 @@ echo -e "\nInstalling AUR Dependencies\n"
 sudo pacman -S --noconfirm vim base-devel --needed  # Installing base-devel if it's not installed already (This package contains everything required to build from the AUR)
 
 # Build all packages
-for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git brave-bin
+for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git brave-bin simple-mtpfs
 do
   if [ ! -d "$HOME/git/$PACKAGE/" ]
   then
@@ -81,24 +81,23 @@ sudo pacman -S --noconfirm --needed \
   xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xbacklight \
   xcalib \
   ttf-font-awesome \
-  libnotify \
-  dunst \
-  nautilus \
+  libnotify dunst \
   neovim \
-  vifm \
+  vifm nautilus \
   openssh \
   htop \
   firefox \
   rxvt-unicode \
   feh \
   imagemagick \
-  pulseaudio \
-  pavucontrol \
+  pulseaudio pavucontrol \
   tldr \
   inkscape \
   code \
   zathura \
-  neofetch
+  neofetch \
+  curl \
+  zsh zsh-completion
 
 # Enabling services
 # systemctl enable ntpd
@@ -110,8 +109,9 @@ do
   sudo make clean install
 done
 
-# Source bash configuration
-source $HOME/.bashrc
+# Switch to zsh
+chsh -s /usr/bin/zsh
+source $HOME/.zsh
 
 # Installing development environments
 # NEED Ruby env
