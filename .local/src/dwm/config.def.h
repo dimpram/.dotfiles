@@ -63,9 +63,9 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_gray5, "-sf", col_gray4, NULL };
 static const char *termcmd[]    = { "urxvt", NULL };
 static const char *browser[]    = { "firefox", NULL };
-static const char *upvol[]      = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
-static const char *downvol[]    = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
-static const char *mutevol[]    = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
+static const char *volup[]      = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
+static const char *voldown[]    = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
+static const char *volmute[]    = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 static const char *brightdown[] = { "xbacklight", "-dec", "10",  NULL };
 static const char *brightup[] 	= { "xbacklight", "-inc", "10",  NULL };
 
@@ -73,8 +73,8 @@ static const char *brightup[] 	= { "xbacklight", "-inc", "10",  NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,						XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,						XK_w,	   spawn,          {.v = browser } },
+	{ MODKEY,			XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,			XK_w,	   spawn,          {.v = browser } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -99,9 +99,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
-	{ 0,             XF86XK_AudioLowerVolume,  spawn,          {.v = downvol } },
-	{ 0,                    XF86XK_AudioMute,  spawn, 	       {.v = mutevol } },
-	{ 0,             XF86XK_AudioRaiseVolume,  spawn,          {.v = upvol   } },
+	{ 0,                    XF86XK_AudioMute,  spawn, 	   {.v = volmute } },
+	{ 0,             XF86XK_AudioLowerVolume,  spawn,          {.v = voldown } },
+	{ 0,             XF86XK_AudioRaiseVolume,  spawn,          {.v = volup   } },
 	{ 0,            XF86XK_MonBrightnessDown,  spawn,          {.v = brightdown } },
 	{ 0,              XF86XK_MonBrightnessUp,  spawn,          {.v = brightup } },
 	TAGKEYS(                        XK_1,                      0)
