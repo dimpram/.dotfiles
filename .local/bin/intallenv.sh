@@ -78,9 +78,11 @@ done
 echo -e "\nInstalling Dependencies\n"
 sudo pacman -S --noconfirm --needed \
   xf86-video-intel \
-  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama \
+  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xbacklight \
   xcalib \
   ttf-font-awesome \
+  libnotify \
+  dunst \
   nautilus \
   neovim \
   vifm \

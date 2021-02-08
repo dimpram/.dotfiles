@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 1000;
+const unsigned int interval = 1500;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -64,9 +64,12 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-	{ datetime,     "  %s  ",           "%F %H:%M" },
-	{ cpu_perc,     "   : %s%%  ",      NULL    },
-	{ ram_perc,     "  R : %s%%  ",     NULL    },
-	{ battery_perc, "   : %s%%  ",  "BAT0"  },
+	/* function format              argument */
+	{ run_command,  "  V: %s  ",    "amixer get Master | awk -F'[][]' 'END{ print $2 }'"},
+	{ keymap,       "  %s    ",    NULL       },
+	{ datetime,     "  %s    ",    "%F %H:%M" },
+	{ wifi_essid,   "  %s    ",    "wlp2s0"   },
+	{ cpu_perc,     "  %s%%    ",  NULL       },
+	{ ram_perc,     "  %s%%  R  ",  NULL       },
+	{ battery_perc, "  %s%%    ",  "BAT0"     },
 };

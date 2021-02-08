@@ -33,10 +33,14 @@ fi
 
 # END DEFUALT xinitrc stuff
 
+
 # Load wallpaper
 ~/.fehbg &
 # Load screen calibration profile
 # /usr/bin/xcalib -d :0 $HOME/.config/asusVS247.icm
+
+# Start notification daemon
+exec dunst &
 
 # Start statusbar
 exec slstatus &
