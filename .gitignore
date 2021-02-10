@@ -55,4 +55,11 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# Other
+.local/share/vifm/Trash
+.local/share/nautilus/
+.local/share/recently-used.xbel
+.local/share/vifm/
+.local/share/nvim/shada/main.shada
+.local/share/xorg/Xorg.0.log
 
