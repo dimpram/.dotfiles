@@ -1,34 +1,12 @@
 #!/bin/sh
 
+# Before executing the script make sure to do the following things while chrooted
+# - Create user
+# - Install network manager and start the service
+# - Install intel microcode  
+
 # Once you've cloned https://github.com/jimDragon/.dotfiles.git to
 # $HOME/git/.dotfiles - run this script to install everything else.
-
-# Action list
-# - Update Arch
-# - Set custom tty font
-# - Stow dotfiles
-# - Crete Directories
-# - install AUR dependencies
-# - install dependencies
-# - Build suckless tools
-# - Source bash
-# - install envirorments (rbenv, LAMP stack) / programming languages (python, go)
-# - Add xiaomi optimizations
-
-
-# notes
-#
-# Set keyboard languages
-# /etc/X11/xorg.conf.d/00-keyboard.conf
-#
-# Section "InputClass"
-#        Identifier "system-keyboard"
-#        MatchIsKeyboard "on"
-#        Option "XkbLayout" "us,gr"
-#        Option "XkbModel" "pc105"
-#        # Option "XkbVariant"
-#        Option "XkbOptions" "grp:alt_shift_toggle"
-# EndSection
 
 set -e                                      # When any command fails the shell immediately shall exit,
 
@@ -38,7 +16,7 @@ sudo pacman -Syu --noconfirm
 
 # Installing custom tty font
 echo -e "\Set Terminus TTY Font\n"
-sudo pacman -S terminus-font
+sudo pacman -S --noconfirm terminus-font --needed
 setfont ter-v32n
 
 # Stowing
@@ -78,7 +56,7 @@ done
 echo -e "\nInstalling Dependencies\n"
 sudo pacman -S --noconfirm --needed \
   xf86-video-intel \
-  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xbacklight \
+  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xorg-xbacklight \
   xcalib \
   ttf-font-awesome \
   libnotify dunst \
@@ -90,17 +68,17 @@ sudo pacman -S --noconfirm --needed \
   rxvt-unicode \
   feh \
   imagemagick \
-  pulseaudio pavucontrol \
+  acpi alsa-utils pulseaudio pavucontrol \
   tldr \
   inkscape \
   code \
   zathura \
   neofetch \
   curl \
-  zsh zsh-completion
+  zsh zsh-completions
 
 # Enabling services
-# systemctl enable ntpd
+# no servive to be enabled
 
 # Compiling suckless tools
 for tool in dmenu slstatus dwm
@@ -120,7 +98,31 @@ source $HOME/.zsh
 # Return home so new shells open at home
 cd $HOME
 
-# Setting wallpaper
-feh --bg-fill ~/pix/wals/gruv.jpg
-
 startx
+
+# Intel microcode 
+# Install intel driver
+# sudo pacman -S xf86-video-intel
+
+
+# Blacklist nvidia kernel modules
+# sudo zsh -c "echo -e 'blacklist nouveau\nblacklist nvidia' > /etc/modprobe.d/nouveau.conf"
+# install bbswitch to turn of the second nvidia gpu
+# sudo zsh -c "echo -e 'options bbswitch load_state=0' > /etc/modprobe.d/bbswitch.conf"
+# sudo zsh -c "echo -e 'bbswitch' > /etc/modules-load.d/bbswitch.conf"
+
+# Configure touchpad
+# sudo pacman -S xf86-input-libinput
+# sudo zsh -c "echo -e 'Section "InputClass"\n\tIdentifier "libinput touchpad"\n\tDriver "libinput"\n\tMatchIsTouchpad "on"\n\tMatchDevicePath "/dev/input/event*"\n\tOption "Tapping" "on"\n\tOption "ClickMethod" "clickfinger"\n\tOption "NaturalScrolling" "true"\nEndSection' > /etc/X11/xorg.conf.d/20-touchpad.conf"
+
+# Set keyboard languages
+# /etc/X11/xorg.conf.d/00-keyboard.conf
+#
+# Section "InputClass"
+#        Identifier "system-keyboard"
+#        MatchIsKeyboard "on"
+#        Option "XkbLayout" "us,gr"
+#        Option "XkbModel" "pc105"
+#        # Option "XkbVariant"
+#        Option "XkbOptions" "grp:alt_shift_toggle"
+# EndSection

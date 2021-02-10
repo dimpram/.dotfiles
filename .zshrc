@@ -15,6 +15,9 @@ compinit
 # # If not running interactively, don't do anything (Unix default)
 [[ $- != *i* ]] && return
 
+# Options
+setopt no_nomatch
+
 # Aliases
 # Common
 alias ls='ls --color=auto'
@@ -26,7 +29,6 @@ alias net='nmtui'
 
 # Custom
 alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1'
-alias dots='cd $HOME/.dotfiles/ && ls && git status'
+alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
-

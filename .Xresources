@@ -2,7 +2,7 @@
 Xft.dpi: 120
 
 ! URxvt Customization
-URxvt.font: xft:Menlo-Regular:size=13
+URxvt.font: xft:RobotoMono:size=14
 URxvt.scrollBar: false
 URxvt.underlineURLs: true
 URxvt.internalBorder: 35
