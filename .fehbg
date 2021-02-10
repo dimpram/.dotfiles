@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/naut/git/.dotfiles/pix/wals/gruv.jpg' 
