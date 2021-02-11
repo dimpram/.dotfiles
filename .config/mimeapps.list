@@ -1,0 +1,7 @@
+[Added Associations]
+application/force-download=org.pwmt.zathura.desktop;brave-browser.desktop;
+video/quicktime=vlc.desktop;
+video/mp4=vlc.desktop;
+
+[Default Applications]
+video/mp4=vlc.desktop

@@ -36,3 +36,7 @@ URxvt.internalBorder: 35
 ! LightGrey + White
 *color7:  #a89984
 *color15: #ebdbb2
+
+! For transparency composition
+urxvt*depth: 32
+urxvt*background: [85]#282828

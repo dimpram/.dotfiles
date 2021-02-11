@@ -36,11 +36,15 @@ fi
 
 # Load wallpaper
 ~/.fehbg &
+
 # Load screen calibration profile
-# /usr/bin/xcalib -d :0 $HOME/.config/asusVS247.icm
+/usr/bin/xcalib -d :0 $HOME/.config/asusVS247.icm
 
 # Start notification daemon
 exec dunst &
+
+# Start auto mounting servie
+exec udiskie &
 
 # Start statusbar
 exec slstatus &
