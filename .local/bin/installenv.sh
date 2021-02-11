@@ -61,21 +61,21 @@ sudo pacman -S --noconfirm --needed \
   xcalib \
   ttf-font-awesome \
   libnotify dunst \
-  vifm nautilus \
+  vifm nautilus totem ffmpeg ffmpegthumbnailer gvfs ntfs-3g vlc \
   openssh \
   htop \
   firefox \
   rxvt-unicode \
-  feh \
-  imagemagick \
+  feh imagemagick \
   acpi alsa-utils pulseaudio pavucontrol \
   tldr \
   inkscape \
   code \
-  zathura \
+  zathura libreoffice \
   neofetch \
   curl \
-  zsh zsh-completions
+  zsh zsh-completions \
+  udisks2 udiskie 
 
 # Enabling services
 # no servive to be enabled

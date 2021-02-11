@@ -61,12 +61,12 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_blue, "-sf", col_bg, NULL };
 static const char *termcmd[]    = { "urxvt", NULL };
-static const char *browser[]    = { "firefox", NULL };
+static const char *browser[]    = { "brave", NULL };
 static const char *volup[]      = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *voldown[]    = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
 static const char *volmute[]    = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
-static const char *brightdown[] = { "xbacklight", "-dec", "10",  NULL };
-static const char *brightup[] 	= { "xbacklight", "-inc", "10",  NULL };
+static const char *brightdown[] = { "xbacklight", "-dec", "5",  NULL };
+static const char *brightup[] 	= { "xbacklight", "-inc", "5",  NULL };
 
 
 static Key keys[] = {
