@@ -1,3 +1,4 @@
+# START DWM
 *.rej
 *.orig
 *.diff
@@ -54,12 +55,40 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+# END DWM
 
 # Other
 .local/share/vifm/Trash
 .local/share/nautilus/
 .local/share/recently-used.xbel
 .local/share/vifm/
+.config/vifm/vifminfo.json
 .local/share/nvim/shada/main.shada
 .local/share/xorg/Xorg.0.log
+.local/share/xorg/Xorg.0.log.old
+.config/Code - OSS/Backups/
+.config/Code - OSS/Cache/
+.config/Code - OSS/CachedData/
+.config/Code - OSS/CachedExtensions/
+.config/Code - OSS/Code Cache/
+.config/Code - OSS/Cookies
+.config/Code - OSS/Cookies-journal
+.config/Code - OSS/Crash Reports/
+.config/Code - OSS/Dictionaries/
+.config/Code - OSS/GPUCache/
+.config/Code - OSS/Local Storage/
+.config/Code - OSS/Network Persistent State
+.config/Code - OSS/Preferences
+.config/Code - OSS/Session Storage/
+.config/Code - OSS/TransportSecurity
+.config/Code - OSS/User/globalStorage/
+.config/Code - OSS/User/workspaceStorage/
+.config/Code - OSS/exthost Crash Reports/
+.config/Code - OSS/languagepacks.json
+.config/Code - OSS/logs/
+.config/Code - OSS/machineid
+.config/Code - OSS/rapid_render.json
+.config/Code - OSS/storage.json
+.local/share/gvfs-metadata/
+.local/share/zathura/
 
