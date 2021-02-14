@@ -46,8 +46,14 @@ exec dunst &
 # Start auto mounting servie
 exec udiskie &
 
+# Start picom
+exec picom &
+
 # Start statusbar
 exec slstatus &
+
+# Open signal
+(sleep 2 && signal-desktop ) &
 
 # Start window manager
 exec dwm
