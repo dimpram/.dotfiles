@@ -58,7 +58,7 @@ echo -e "\nInstalling Dependencies\n"
 sudo pacman -S --noconfirm --needed \
   xf86-video-intel \
   xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xorg-xbacklight \
-  xcalib \
+  xcalib picom \
   ttf-font-awesome \
   libnotify dunst \
   vifm nautilus totem ffmpeg ffmpegthumbnailer gvfs ntfs-3g vlc \
@@ -71,11 +71,12 @@ sudo pacman -S --noconfirm --needed \
   tldr \
   inkscape \
   code \
-  zathura libreoffice \
+  zathura zathura-pdf-poppler libreoffice \
   neofetch \
   curl \
   zsh zsh-completions \
-  udisks2 udiskie 
+  udisks2 udiskie \
+  signal-desktop
 
 # Enabling services
 # no servive to be enabled
