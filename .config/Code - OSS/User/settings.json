@@ -3,7 +3,6 @@
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
     "window.menuBarVisibility": "toggle",
-    "workbench.colorTheme": "Gruvbox Material Dark",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim"
 }
