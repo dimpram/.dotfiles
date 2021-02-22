@@ -62,8 +62,7 @@ sudo pacman -S --noconfirm --needed \
   ttf-font-awesome \
   libnotify dunst \
   vifm nautilus totem ffmpeg ffmpegthumbnailer gvfs ntfs-3g vlc \
-  openssh \
-  htop \
+  openssh unzip scrot \
   firefox \
   rxvt-unicode \
   feh imagemagick \
@@ -93,7 +92,21 @@ chsh -s /usr/bin/zsh
 source $HOME/.zsh
 
 # Installing development environments
-# NEED Ruby env
+# Ruby Environment
+for PACKAGE in rbenv ruby-build
+do
+  if [ ! -d "$HOME/git/$PACKAGE/" ]
+  then
+    echo -e "\nCloning $PACKAGE\n"
+    git clone https://aur.archlinux.org/$PACKAGE.git $HOME/git/$PACKAGE
+  fi
+
+  echo -e "\nBuilding $PACKAGE\n"
+
+  cd $HOME/git/$PACKAGE
+  makepkg -si --noconfirm
+done
+rbenv init 
 # NEED Lamp stack with php 7
 
 # Return home so new shells open at home

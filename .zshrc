@@ -15,6 +15,9 @@ compinit
 # # If not running interactively, don't do anything (Unix default)
 [[ $- != *i* ]] && return
 
+# For rbenv
+eval "$(rbenv init -)"
+
 # Options
 setopt no_nomatch
 
@@ -32,3 +35,4 @@ alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1'
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
+alias rutc='cd $HOME/git/RUTC-Webpage && git status && code .'

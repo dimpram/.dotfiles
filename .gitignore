@@ -91,4 +91,4 @@ dkms.conf
 .config/Code - OSS/storage.json
 .local/share/gvfs-metadata/
 .local/share/zathura/
-
+.local/share/

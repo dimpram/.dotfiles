@@ -2,6 +2,8 @@
 
 My configuration files for my 2021 Arch Linux rice based around Gruvbox.
 
+![Desktop preview](preview.png)
+
 + __WM:__ [dwm](https://dwm.suckless.org/) + fullgaps + actualfullscreen
 + __GTK theme:__ [gruvbox-dark-gtk](https://aur.archlinux.org/packages/gruvbox-dark-gtk)
 + __launcher:__ [dmenu](https://tools.suckless.org/dmenu/)
