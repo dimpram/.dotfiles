@@ -1,8 +1,8 @@
 # ~/.dotfiles
 
-My configuration files for my 2021 Arch Linux rice based around Gruvbox.
-
 ![Desktop preview](preview.png)
+
+My configuration files for my 2021 Arch Linux rice based around Gruvbox.
 
 ## Programs
 
@@ -14,7 +14,7 @@ My configuration files for my 2021 Arch Linux rice based around Gruvbox.
 + __Image Viewer:__ [feh](https://feh.finalrewind.org/)
 + __File Manager:__ [vifm](https://vifm.info/)
 + __bar:__ [slstatus](https://tools.suckless.org/slstatus/)
-+ __browser:__ [brave](https://brave.com/), [firefox](https://www.mozilla.org/en-US/firefox/new/)
++ __browser:__ [firefox](https://www.mozilla.org/en-US/firefox/new/), [brave](https://brave.com/)
 
 ## Getting Started
 
@@ -48,4 +48,4 @@ Now that the config files are stowed, the environment should mostly be up and ru
 #### Dependencies
 There are various dependencies that are required to get this rice working perfectly. Most are in the Arch repos but you will need to install some stuff form the AUR. If you're setting this rice up on another distro just install the same applications with the equivalent commands.
 
-Note: if you're using the automatic script you don't have to worry about installing these manually.
+Note: if you're using the automatic script you don't have to worry about installing these manually. You can modify the script and make your own bootstrap script pretty easily :)
