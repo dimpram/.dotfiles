@@ -78,7 +78,7 @@ sudo pacman -S --noconfirm --needed \
   signal-desktop
 
 # Enabling services
-# no servive to be enabled
+sudo systemctl enable systemd-timesyncd.service # For Time synchronization
 
 # Compiling suckless tools
 for tool in dmenu slstatus dwm

@@ -4,5 +4,6 @@
     "breadcrumbs.enabled": true,
     "window.menuBarVisibility": "toggle",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim"
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
+    "workbench.colorTheme": "Mayukai Mirage Gruvbox Darktooth"
 }

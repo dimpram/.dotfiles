@@ -59,6 +59,9 @@ dkms.conf
 
 # Other
 .local/share/vifm/Trash
+.config/vifm/scripts/README
+.config/vifm/vifm-help.txt
+.config/vifm/vifminfo.json
 .local/share/nautilus/
 .local/share/recently-used.xbel
 .local/share/vifm/
