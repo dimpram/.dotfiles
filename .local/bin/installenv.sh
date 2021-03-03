@@ -75,10 +75,12 @@ sudo pacman -S --noconfirm --needed \
   curl \
   zsh zsh-completions \
   udisks2 udiskie \
+  bluez bluez-utils \
   signal-desktop
 
 # Enabling services
 sudo systemctl enable systemd-timesyncd.service # For Time synchronization
+sudo systemctl enable bluetooth.service         # For Bluetooth service
 
 # Compiling suckless tools
 for tool in dmenu slstatus dwm
@@ -107,6 +109,13 @@ do
   makepkg -si --noconfirm
 done
 rbenv init 
+
+# Node Version Manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | zsh
+source ~/.zshrc
+nvm install 15
+nvm use 15
+
 # NEED Lamp stack with php 7
 
 # Return home so new shells open at home
@@ -142,3 +151,6 @@ startx
 #        # Option "XkbVariant"
 #        Option "XkbOptions" "grp:alt_shift_toggle"
 # EndSection
+
+# Install pandoc
+# sudo pacman -S pandoc texlive-core ttf-dejavu         

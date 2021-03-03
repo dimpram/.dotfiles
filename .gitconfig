@@ -1,0 +1,5 @@
+[user]
+	email = dev@dimitrisprama.com
+	name = dimprama
+[init]
+	defaultBranch = main

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# udisksctl unmount -b /dev/sdb     # Unmounting drive
+# udisksctl power-off -b /dev/sdb   # Safely removes it

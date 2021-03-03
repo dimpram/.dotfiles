@@ -21,6 +21,8 @@ eval "$(rbenv init -)"
 # Options
 setopt no_nomatch
 
+# PROMPT='2018149 > '
+
 # Aliases
 # Common
 alias ls='ls --color=auto'
@@ -36,4 +38,8 @@ alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
 alias rutc='cd $HOME/git/RUTC-Webpage && git status && code .'
-alias notes='cd $HOME/dox/uni/6/notes && code .'
+alias notes='cd $HOME/dox/uni/notes && code .'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

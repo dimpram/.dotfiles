@@ -92,6 +92,7 @@ dkms.conf
 .config/Code - OSS/machineid
 .config/Code - OSS/rapid_render.json
 .config/Code - OSS/storage.json
+.config/Code - OSS/CachedExtensionVSIXs/
 .local/share/gvfs-metadata/
 .local/share/zathura/
 .local/share/

@@ -63,7 +63,7 @@ passwd
 pacman -S --no-confirm sudo
 
 # Creating a user
-useradd -m -G  wheel,audio,video,optical,storage naut 
+useradd -m -G  wheel,audio,video,optical,storage,lp naut 
 echo "Set a new user password"
 passwd naut
 
