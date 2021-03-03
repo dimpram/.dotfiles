@@ -4,22 +4,12 @@ HISTSIZE=1000
 SAVEHIST=1000
 unsetopt beep
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename $HOME'/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-#
 # # If not running interactively, don't do anything (Unix default)
-[[ $- != *i* ]] && return
-
-# For rbenv
-eval "$(rbenv init -)"
+# [[ $- != *i* ]] && return
 
 # Options
-setopt no_nomatch
+setopt no_nomatch # For ignoring globbing expressions
 
 # PROMPT='2018149 > '
 
@@ -41,11 +31,17 @@ alias mntphone='simple-mtpfs --device 1 cell/'
 alias rutc='cd $HOME/git/RUTC-Webpage && git status && code .'
 alias notes='cd $HOME/dox/uni/notes'
 
-# nvm loading
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# NVM Setup
+declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
 
-# custom scripts loading
-path=($HOME'/.local/bin' $path)
-export PATH
+NODE_GLOBALS+=("node")
+NODE_GLOBALS+=("nvm")
+
+load_nvm () {
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+}
+
+for cmd in "${NODE_GLOBALS[@]}"; do
+    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
+done
