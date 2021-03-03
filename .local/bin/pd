@@ -1,11 +1,13 @@
 #!/bin/bash
 
-pandoc "$1" \
-    -f gfm \
+pandoc \
+    -f markdown+yaml_metadata_block \
+    -t latex \
+    --pdf-engine=xelatex \
     -V linkcolor:blue \
     -V geometry:a4paper \
     -V geometry:margin=2cm \
     -V mainfont="DejaVu Serif" \
     -V monofont="DejaVu Sans Mono" \
-    --pdf-engine=xelatex \
-    -o "$2"
+    -o "$2" \
+    -s "$1"
