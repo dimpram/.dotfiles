@@ -67,7 +67,7 @@ static const char *voldown[]    = { "/usr/bin/pactl", "set-sink-volume", "0", "-
 static const char *volmute[]    = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 static const char *brightdown[] = { "xbacklight", "-dec", "5",  NULL };
 static const char *brightup[] 	= { "xbacklight", "-inc", "5",  NULL };
-static const char *scrshot[]   	= { "scrot",  NULL };
+static const char *scrshot[]   	= { "scrot", "--select", "%Y-%m-%d.png", NULL };
 
 
 static Key keys[] = {
