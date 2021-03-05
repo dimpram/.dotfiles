@@ -10,6 +10,9 @@ bindkey -e
 
 # Options
 setopt no_nomatch # For ignoring globbing expressions
+zstyle :compinstall filename $HOME'/.zshrc'
+autoload -Uz compinit
+compinit
 
 # PROMPT='2018149 > '
 

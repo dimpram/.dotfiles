@@ -5,5 +5,5 @@
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
     "workbench.colorTheme": "Mayukai Mirage Gruvbox Darktooth",
-    "window.zoomLevel": 2
+    "window.zoomLevel": 1
 }
