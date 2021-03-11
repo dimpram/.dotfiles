@@ -25,6 +25,7 @@ alias lla='ls -la'
 alias grep='grep --color'
 alias net='nmtui'
 alias vim='nvim'
+alias feh='feh -Z --auto-rotate -d --scale-down -B black'
 
 # Custom
 alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1'
@@ -48,3 +49,17 @@ load_nvm () {
 for cmd in "${NODE_GLOBALS[@]}"; do
     eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
 done
+
+
+# Python venv
+function cd() {
+  if [[ -d ./venv ]] ; then
+    deactivate
+  fi
+
+  builtin cd $1
+
+  if [[ -d ./venv ]] ; then
+    . ./venv/bin/activate
+  fi
+}
