@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/naut/git/portfolio/node_modules/upath/build/code'
+let g:netrw_dirhist_5='/home/naut/dox/uni/6/software/minimal-ionio/docs/_pages'
 let g:netrw_dirhist_4='/home/naut/git/.dotfiles/.git'
 let g:netrw_dirhist_3='/home/naut/.config/nvim'
 let g:netrw_dirhist_2='/etc/X11/xorg.conf.d'

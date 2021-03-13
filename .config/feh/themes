@@ -1,0 +1,6 @@
+feh \
+--scale-down \
+--auto-rotate \
+-Z \
+-d \
+-B black

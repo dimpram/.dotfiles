@@ -96,3 +96,11 @@ dkms.conf
 .local/share/gvfs-metadata/
 .local/share/zathura/
 .local/share/
+.local/bin/pip
+.local/bin/pip3
+.local/bin/pip3.9
+.local/bin/virtualenv
+.local/bin/wheel
+.local/lib/
+pix/thumb/
+.config/nvim/.netrwhist
