@@ -2,19 +2,23 @@
 
 ![Desktop preview](preview.png)
 
-My configuration files for my 2021 Arch Linux rice based around Gruvbox.
+My configuration files for my 2021 Arch Linux rice based around Gruvbox. This configuration runs currently on my Xiaomi MI Air 13.3 2018 global edition and thus the bootstraping script contains some optional optimizations (disable nvidia GPU, screen calibration, drivers, keyboard...) that you can install in case that you have the same laptop.
 
 ## Programs
 
 + __WM:__ [dwm](https://dwm.suckless.org/) + fullgaps + actualfullscreen
++ __Compositor:__ [picom](https://github.com/yshui/picom)
 + __GTK theme:__ [gruvbox-dark-gtk](https://aur.archlinux.org/packages/gruvbox-dark-gtk)
 + __launcher:__ [dmenu](https://tools.suckless.org/dmenu/)
++ __Notifications:__ [dunst](https://dunst-project.org/)
 + __terminal:__ [urxvt](https://github.com/alacritty/alacritty) + zsh
 + __Editor:__ [vscode OSS](https://code.visualstudio.com/), [neovim-nightly](https://neovim.io/)
 + __Image Viewer:__ [feh](https://feh.finalrewind.org/)
 + __File Manager:__ [vifm](https://vifm.info/)
 + __bar:__ [slstatus](https://tools.suckless.org/slstatus/)
 + __browser:__ [firefox](https://www.mozilla.org/en-US/firefox/new/), [brave](https://brave.com/)
++ __power:__ [tlp](https://wiki.archlinux.org/index.php/TLP)
++ __hardware:__ [bashmount](https://github.com/jamielinux/bashmount)
 
 ## Getting Started
 
