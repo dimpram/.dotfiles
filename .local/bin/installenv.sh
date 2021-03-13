@@ -39,7 +39,7 @@ echo -e "\nInstalling AUR Dependencies\n"
 sudo pacman -S --noconfirm vim base-devel --needed  # Installing base-devel if it's not installed already (This package contains everything required to build from the AUR)
 
 # Build all packages
-for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git brave-bin simple-mtpfs gruvbox-dark-gtk neovim-nightly-bin
+for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git brave-bin simple-mtpfs gruvbox-dark-gtk neovim-nightly-bin bashmount
 do
   if [ ! -d "$HOME/git/$PACKAGE/" ]
   then
@@ -66,21 +66,22 @@ sudo pacman -S --noconfirm --needed \
   firefox \
   rxvt-unicode \
   feh imagemagick \
-  acpi alsa-utils pulseaudio pavucontrol \
+  acpi alsa-utils pulseaudio pavucontrol tlp \
   tldr \
   inkscape \
   code \
   zathura zathura-pdf-poppler libreoffice \
   neofetch \
   curl \
-  zsh zsh-completions \
-  udisks2 udiskie \
+  zsh zsh-completions zsh-syntax-highlighting \
+  udisks2 \
   bluez bluez-utils \
   signal-desktop
 
 # Enabling services
 sudo systemctl enable systemd-timesyncd.service # For Time synchronization
 sudo systemctl enable bluetooth.service         # For Bluetooth service
+sudo systemctl enable tlp.service               # For power management
 
 # Compiling suckless tools
 for tool in dmenu slstatus dwm
@@ -89,7 +90,7 @@ do
   sudo make clean install
 done
 
-# Switch to zsh
+# Switch to zsh make that a separate script
 chsh -s /usr/bin/zsh
 source $HOME/.zsh
 
