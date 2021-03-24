@@ -52,6 +52,9 @@ exec picom &
 # Start statusbar
 exec slstatus &
 
+# Start battery notification script
+exec ~/.local/bin/bat &
+
 # Open signal
 (sleep 2 && signal-desktop ) &
 
