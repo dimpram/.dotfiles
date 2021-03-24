@@ -3,3 +3,5 @@
 	name = dimprama
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false
