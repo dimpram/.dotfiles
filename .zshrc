@@ -55,13 +55,14 @@ bindkey "^[[F" end-of-line
 #------------------------------
 # Alias stuff
 #------------------------------
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias l='ls -lh'
 alias la='ls -ah'
 alias lla='ls -lah'
 alias grep='grep --color'
 alias net='nmtui'
 alias vim='nvim'
+alias tree='tree -I 'node_modules' --dirsfirst'
 
 # Custom
 alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1'
@@ -70,6 +71,7 @@ alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
 alias rutc='cd $HOME/git/RUTC-Webpage && git status && code .'
 alias notes='cd $HOME/dox/uni/notes'
+alias sql='sudo mysql -u root -p'
 
 #------------------------------
 # Shell Functions
@@ -162,6 +164,8 @@ else
 fi
 
 PS1=${(j::Q)${(Z:Cn:):-$'
+  $(acpi | grep -o "[0-9]*%")%
+  " "
   ${p_host}
   %F{white}%~%f
   %(!.%F{red}%#%f.%F{none}%#%f)
