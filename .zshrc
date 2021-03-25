@@ -164,7 +164,7 @@ else
 fi
 
 PS1=${(j::Q)${(Z:Cn:):-$'
-  $(acpi | grep -o "[0-9]*%")%
+  $(cat /sys/class/power_supply/BAT0/capacity)%%
   " "
   ${p_host}
   %F{white}%~%f

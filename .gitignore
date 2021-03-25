@@ -103,4 +103,5 @@ dkms.conf
 .local/bin/wheel
 .local/lib/
 pix/thumb/
+pix/ieee/
 .config/nvim/.netrwhist
