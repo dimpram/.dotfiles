@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/naut/git/.dotfiles/pix/wals/gruv.jpg' 
+feh --no-fehbg --bg-fill --image-bg 'black' '/home/naut/git/.dotfiles/pix/wals/forest1.jpg' 

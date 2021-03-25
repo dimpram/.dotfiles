@@ -49,9 +49,6 @@ exec udiskie &
 # Start picom
 exec picom &
 
-# Start statusbar
-exec slstatus &
-
 # Start battery notification script
 exec ~/.local/bin/bat &
 

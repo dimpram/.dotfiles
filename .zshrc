@@ -65,7 +65,7 @@ alias vim='nvim'
 alias tree='tree -I 'node_modules' --dirsfirst'
 
 # Custom
-alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1'
+alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fill pix/wals/forest1.jpg'
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
@@ -177,3 +177,5 @@ RPROMPT=$'${vcs_info_msg_0_}'
 #RPROMPT=\$vcs_info_msg_0_
 
 # vim: set ts=2 sw=2 et:
+
+date
