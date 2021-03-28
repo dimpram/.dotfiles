@@ -9,16 +9,15 @@ My configuration files for my 2021 Arch Linux rice based around Gruvbox. This co
 + __WM:__ [dwm](https://dwm.suckless.org/) + fullgaps + actualfullscreen
 + __Compositor:__ [picom](https://github.com/yshui/picom)
 + __GTK theme:__ [gruvbox-dark-gtk](https://aur.archlinux.org/packages/gruvbox-dark-gtk)
-+ __launcher:__ [dmenu](https://tools.suckless.org/dmenu/)
++ __Launcher:__ [dmenu](https://tools.suckless.org/dmenu/)
 + __Notifications:__ [dunst](https://dunst-project.org/)
-+ __terminal:__ [urxvt](https://github.com/alacritty/alacritty) + zsh
++ __Terminal:__ [urxvt](https://github.com/alacritty/alacritty) + zsh
 + __Editor:__ [vscode OSS](https://code.visualstudio.com/), [neovim-nightly](https://neovim.io/)
 + __Image Viewer:__ [feh](https://feh.finalrewind.org/)
 + __File Manager:__ [vifm](https://vifm.info/)
-+ __bar:__ [slstatus](https://tools.suckless.org/slstatus/)
-+ __browser:__ [firefox](https://www.mozilla.org/en-US/firefox/new/), [brave](https://brave.com/)
-+ __power:__ [tlp](https://wiki.archlinux.org/index.php/TLP)
-+ __hardware:__ [bashmount](https://github.com/jamielinux/bashmount)
++ __Browser:__ [firefox](https://www.mozilla.org/en-US/firefox/new/)
++ __Power:__ [tlp](https://wiki.archlinux.org/index.php/TLP)
++ __Hardware:__ [bashmount](https://github.com/jamielinux/bashmount)
 
 ## Getting Started
 
