@@ -50,7 +50,7 @@ exec udiskie &
 exec picom &
 
 # Start battery notification script
-exec ~/.local/bin/bat &
+exec ~/.local/bin/battery &
 
 # Open signal
 (sleep 2 && signal-desktop ) &

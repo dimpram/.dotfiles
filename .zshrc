@@ -164,8 +164,6 @@ else
 fi
 
 PS1=${(j::Q)${(Z:Cn:):-$'
-  $(cat /sys/class/power_supply/BAT0/capacity)%%
-  " "
   ${p_host}
   %F{white}%~%f
   %(!.%F{red}%#%f.%F{none}%#%f)

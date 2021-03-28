@@ -68,6 +68,7 @@ static const char *volmute[]    = { "/usr/bin/pactl", "set-sink-mute",   "0", "t
 static const char *brightdown[] = { "xbacklight", "-dec", "5",  NULL };
 static const char *brightup[] 	= { "xbacklight", "-inc", "5",  NULL };
 static const char *scrshot[]   	= { "scrot", "--select", "%Y-%m-%d.png", NULL };
+static const char *status[]     = { "status", NULL };
 
 
 static Key keys[] = {
@@ -107,6 +108,7 @@ static Key keys[] = {
 	{ 0,            XF86XK_MonBrightnessDown,  spawn,          {.v = brightdown } },
 	{ 0,              XF86XK_MonBrightnessUp,  spawn,          {.v = brightup } },
 	{ 0,                            XK_Print,  spawn,          {.v = scrshot } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = status } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
