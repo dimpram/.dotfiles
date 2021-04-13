@@ -67,6 +67,7 @@ dkms.conf
 .local/share/vifm/
 .config/vifm/vifminfo.json
 .local/share/nvim/shada/main.shada
+.config/nvim/.netrwhist
 .local/share/xorg/Xorg.0.log
 .local/share/xorg/Xorg.0.log.old
 .config/Code - OSS/Backups/
@@ -126,4 +127,4 @@ dkms.conf
 .local/bin/__pycache__/
 pix/thumb/
 pix/ieee/
-.config/nvim/.netrwhist
+.config/nvim/plugged/

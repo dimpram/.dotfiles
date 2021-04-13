@@ -8,6 +8,12 @@
 # Once you've cloned https://github.com/jimDragon/.dotfiles.git to
 # $HOME/git/.dotfiles - run this script to install everything else.
 
+
+# Functions
+installpkg() {
+  sudo pacman -S --noconfirm --needed "$1"
+}
+
 set -e                                      # When any command fails the shell immediately shall exit,
 
 # Updating Arch
@@ -15,8 +21,7 @@ echo -e "\nUpdating Arch\n"
 sudo pacman -Syu --noconfirm
 
 # Installing custom tty font
-echo -e "\Set Terminus TTY Font\n"
-sudo pacman -S --noconfirm terminus-font --needed
+echo -e "\nMaking font bigger\n"
 setfont ter-v32n
 
 # Stowing
@@ -29,7 +34,7 @@ cd $HOME/git
 stow .dotfiles                              # Stowing the .dotfiles folder
 
 # Creating filesystem
-for dir in dox dls cell
+for dir in dox dls cell tmp
 do
   mkdir -p $HOME/$dir
 done
@@ -117,8 +122,6 @@ source ~/.zshrc
 nvm install 15
 nvm use 15
 
-# NEED Lamp stack with php 7
-
 # Return home so new shells open at home
 cd $HOME
 
@@ -126,10 +129,6 @@ startx
 
 # Install intel driver
 # sudo pacman -S xf86-video-intel
-
-# sudo pacman -S lxappearance
-# Enable it with lxappearance
-
 
 # Blacklist nvidia kernel modules
 # sudo zsh -c "echo -e 'blacklist nouveau\nblacklist nvidia' > /etc/modprobe.d/nouveau.conf"
@@ -154,4 +153,6 @@ startx
 # EndSection
 
 # Install pandoc
-# sudo pacman -S pandoc texlive-core ttf-dejavu         
+# sudo pacman -S pandoc texlive-core ttf-dejavu
+
+# Remove fontawesome from dwm and add Nerdfont to urxvt and dwm
