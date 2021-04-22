@@ -128,3 +128,4 @@ dkms.conf
 pix/thumb/
 pix/ieee/
 .config/nvim/plugged/
+.local/bin/autopep8

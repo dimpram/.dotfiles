@@ -28,7 +28,6 @@ SAVEHIST=1000
 export BROWSER="firefox"
 export EDITOR="nvim"
 export PATH="${PATH}:${HOME}/bin:${HOME}/.cabal/bin"
-# export GOPATH="$HOME/go"
 
 #-----------------------------
 # Dircolors

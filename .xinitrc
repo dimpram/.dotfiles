@@ -43,9 +43,6 @@ fi
 # Start notification daemon
 exec dunst &
 
-# Start auto mounting servie
-exec udiskie &
-
 # Start picom
 exec picom &
 

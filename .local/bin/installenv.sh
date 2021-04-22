@@ -122,6 +122,9 @@ source ~/.zshrc
 nvm install 15
 nvm use 15
 
+# Golang
+sudo pacman -S go go-tools
+
 # Return home so new shells open at home
 cd $HOME
 

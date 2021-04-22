@@ -49,6 +49,7 @@ function! StatuslineGit()
 endfunction
 
 set laststatus=2              " First ensure that the status bar is enabled all the time
+
 set statusline=
 set statusline+=%#CursorColumn#
 set statusline+=%{StatuslineGit()}
