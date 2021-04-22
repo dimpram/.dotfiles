@@ -52,3 +52,7 @@ Now that the config files are stowed, the environment should mostly be up and ru
 There are various dependencies that are required to get this rice working perfectly. Most are in the Arch repos but you will need to install some stuff form the AUR. If you're setting this rice up on another distro just install the same applications with the equivalent commands.
 
 Note: if you're using the automatic script you don't have to worry about installing these manually. You can modify the script and make your own bootstrap script pretty easily :)
+
+## Notes
+
+I decided to remove GTK Gruvbox theme because the way i had it setup wasn't very clean. It's up to you know to enable a GTK theme of your choice :)
