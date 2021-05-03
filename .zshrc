@@ -64,7 +64,7 @@ alias vim='nvim'
 alias tree='tree -I 'node_modules' --dirsfirst'
 
 # Custom
-alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fill pix/wals/forest1.jpg'
+alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fill pix/wals/wallpaper.jpg'
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'

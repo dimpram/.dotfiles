@@ -128,4 +128,6 @@ dkms.conf
 pix/thumb/
 pix/ieee/
 .config/nvim/plugged/
+.config/Code - OSS/.org.chromium.Chromium.0ouvd0
 .local/bin/autopep8
+.fehbg

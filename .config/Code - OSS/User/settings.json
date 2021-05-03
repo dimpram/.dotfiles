@@ -1,9 +1,13 @@
 {
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": true,
-    "window.menuBarVisibility": "toggle",
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim/init.vim",
-    "workbench.colorTheme": "Mayukai Mirage Gruvbox Darktooth",
-    "window.zoomLevel": 1
+    "workbench.colorTheme": "Material Theme Darker",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "window.menuBarVisibility": "toggle",
+    "editor.renderControlCharacters": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "window.zoomLevel": 2
 }

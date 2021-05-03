@@ -1,24 +1,23 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
 /* appearance */
-static const unsigned int borderpx  = 5;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 30;       /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { 
-	"RobotoCondensed:size=14",
-	"FontAwesome:size=12",
+  "FiraCode Nerd Font Mono:size=14"
 };
-static const char dmenufont[]    = "RobotoCondensed:size=14";
-static const char col_bg[]       = "#282828";
-static const char col_gray[]     = "#a89984";
-static const char col_fg[]       = "#ebdbb2";
-static const char col_blue[]     = "#83a598";
+static const char dmenufont[]    = "FiraCode Nerd Font Mono:size=14";
+static const char col_bg[]       = "#212121";
+static const char col_gray[]     = "#404040";
+static const char col_fg[]       = "#eeffff";
+static const char col_red[]     = "#f07178";
 static const char *colors[][3]   = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_fg, col_bg,   col_gray },
-	[SchemeSel]  = { col_fg, col_blue, col_blue },
+	[SchemeSel]  = { col_fg, col_red, col_red },
 };
 
 /* tagging */
@@ -58,7 +57,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_blue, "-sf", col_bg, NULL };
+static const char *dmenucmd[]   = { "rofi", "-show", "run", NULL };
 static const char *termcmd[]    = { "urxvt", NULL };
 static const char *browser[]    = { "firefox", NULL };
 static const char *filemgr[]    = { "nautilus", NULL };
