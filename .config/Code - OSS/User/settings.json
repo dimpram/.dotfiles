@@ -9,5 +9,5 @@
     "editor.renderControlCharacters": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.iconTheme": "eq-material-theme-icons-darker",
-    "window.zoomLevel": 2
+    "window.zoomLevel": 1
 }
