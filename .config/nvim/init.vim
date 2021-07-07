@@ -6,6 +6,14 @@
 " -----------------------------------------------------------------------------
 
 " -------------------
+" Pluggins vim
+" -------------------
+call plug#begin()
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+let g:coc_node_path = '~/.nvm/versions/node/v15.10.0/bin/node'
+
+" -------------------
 " Vanilla vim
 " -------------------
 set nocompatible
@@ -55,15 +63,14 @@ set statusline+=%#CursorColumn#
 set statusline+=%{StatuslineGit()}
 set statusline+=%#PmenuSel#
 set statusline+=\ %f
-set statusline+=%m\
+set statusline+=%m
 set statusline+=%=
 set statusline+=%#CursorColumn#
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]
+set statusline+=\[%{&fileformat}]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
-set statusline+=\ 
 
 
 " -------------------

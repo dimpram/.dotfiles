@@ -68,8 +68,7 @@ alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fil
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
-alias rutc='cd $HOME/git/RUTC-Webpage && git status && code .'
-alias notes='cd $HOME/dox/uni/notes'
+alias notes='cd $HOME/dls/cloud_backup/Notes/'
 alias sql='sudo mysql -u root -p'
 
 #------------------------------
@@ -102,7 +101,6 @@ load_nvm () {
 for cmd in "${NODE_GLOBALS[@]}"; do
     eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
 done
-
 
 # -- Python venv
 function cd() {
