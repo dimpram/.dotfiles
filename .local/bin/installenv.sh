@@ -9,20 +9,12 @@
 # $HOME/git/.dotfiles - run this script to install everything else.
 
 
-# Functions
-installpkg() {
-  sudo pacman -S --noconfirm --needed "$1"
-}
-
 set -e                                      # When any command fails the shell immediately shall exit,
 
 # Updating Arch
 echo -e "\nUpdating Arch\n"
 sudo pacman -Syu --noconfirm
 
-# Installing custom tty font
-echo -e "\nMaking font bigger\n"
-setfont ter-v32n
 
 # Stowing
 echo -e "\nStowing Dotfiles\n"
@@ -44,7 +36,7 @@ echo -e "\nInstalling AUR Dependencies\n"
 sudo pacman -S --noconfirm vim base-devel --needed  # Installing base-devel if it's not installed already (This package contains everything required to build from the AUR)
 
 # Build all packages
-for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git brave-bin simple-mtpfs gruvbox-dark-gtk neovim-nightly-bin bashmount
+for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git simple-mtpfs neovim-nightly-bin bashmount
 do
   if [ ! -d "$HOME/git/$PACKAGE/" ]
   then
@@ -64,22 +56,19 @@ sudo pacman -S --noconfirm --needed \
   xf86-video-intel \
   xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xorg-xbacklight \
   xcalib xclip picom \
-  ttf-font-awesome \
   libnotify dunst \
-  vifm nautilus totem ffmpeg ffmpegthumbnailer gvfs ntfs-3g vlc \
+  vifm nautilus vlc \
   openssh unzip scrot \
   firefox \
-  rxvt-unicode \
+  rxvt-unicode rofi \
   feh imagemagick \
   acpi alsa-utils pulseaudio pavucontrol tlp \
   tldr \
   inkscape \
-  code \
-  zathura zathura-pdf-poppler libreoffice \
+  libreoffice \
   neofetch \
   curl \
   zsh zsh-completions zsh-syntax-highlighting \
-  udisks2 \
   bluez bluez-utils \
   signal-desktop
 
@@ -87,13 +76,6 @@ sudo pacman -S --noconfirm --needed \
 sudo systemctl enable systemd-timesyncd.service # For Time synchronization
 sudo systemctl enable bluetooth.service         # For Bluetooth service
 sudo systemctl enable tlp.service               # For power management
-
-# Compiling suckless tools
-for tool in dmenu slstatus dwm
-do 
-  cd $HOME/.local/src/$tool
-  sudo make clean install
-done
 
 # Switch to zsh make that a separate script
 chsh -s /usr/bin/zsh
@@ -115,15 +97,6 @@ do
   makepkg -si --noconfirm
 done
 rbenv init 
-
-# Node Version Manager
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | zsh
-source ~/.zshrc
-nvm install 15
-nvm use 15
-
-# Golang
-sudo pacman -S go go-tools
 
 # Return home so new shells open at home
 cd $HOME
@@ -158,4 +131,3 @@ startx
 # Install pandoc
 # sudo pacman -S pandoc texlive-core ttf-dejavu
 
-# Remove fontawesome from dwm and add Nerdfont to urxvt and dwm

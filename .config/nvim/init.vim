@@ -6,17 +6,9 @@
 " -----------------------------------------------------------------------------
 
 " -------------------
-" Pluggins vim
-" -------------------
-call plug#begin()
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
-let g:coc_node_path = '~/.nvm/versions/node/v15.10.0/bin/node'
-
-" -------------------
 " Vanilla vim
 " -------------------
-set nocompatible
+set nocompatible 
 set encoding=utf-8
 syntax on                     " Syntax highlighting
 set nu rnu                    " Hybrid lines
@@ -36,6 +28,18 @@ set cursorline                " Sets cursor line
 " set spell                     " Set spell checking with ISO language codes like :set spelllang=fr_ch
 " set autochdir                 " Change directory to the current buffer when opening files.
 
+" -------------------
+" Colors
+" -------------------
+if exists('&termguicolors') && exists('&winblend') 
+  syntax enable
+  set winblend=0
+  set wildoptions=pum
+  set pumblend=5
+  " Set theme
+  let g:molokai_original = 1
+  colorscheme monokai
+endif
 
 " -------------------
 " Useful stuff
@@ -67,6 +71,7 @@ set statusline+=%m
 set statusline+=%=
 set statusline+=%#CursorColumn#
 set statusline+=\ %y
+set statusline+=%{coc#status()}
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}]
 set statusline+=\ %p%%
@@ -115,3 +120,6 @@ nnoremap <Right> :vertical resize -4<CR>
 " nmap <C-w><right> <C-w>>
 " nmap <C-w><up> <C-w>+
 " nmap <C-w><down> <C-w>-
+
+runtime ./plug.vim
+runtime ./cocconfig.vim
