@@ -67,7 +67,7 @@ sudo pacman -S --noconfirm --needed \
   inkscape \
   libreoffice \
   neofetch \
-  curl \
+  curl wget \
   zsh zsh-completions zsh-syntax-highlighting \
   bluez bluez-utils \
   signal-desktop
