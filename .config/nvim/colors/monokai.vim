@@ -7,6 +7,8 @@
 " by Wimer Hazenberg and its darker variant
 " by Hamish Stuart Macpherson
 "
+" Modified by @dimpram 
+" https://github.com/dimpram
 
 hi clear
 
@@ -60,8 +62,7 @@ hi Label           guifg=#E6DB74               gui=none
 hi Macro           guifg=#C4BE89               gui=italic
 hi SpecialKey      guifg=#66D9EF               gui=italic
 
-hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold
-hi ModeMsg         guifg=#E6DB74
+hi MatchParen      guifg=#000000 guibg=#FD971F gui=bold hi ModeMsg         guifg=#E6DB74
 hi MoreMsg         guifg=#E6DB74
 hi Operator        guifg=#F92672
 
@@ -116,7 +117,7 @@ if s:molokai_original == 1
    hi CursorLineNr    guifg=#FD971F               gui=none
    hi CursorColumn                  guibg=#3E3D32
    hi ColorColumn                   guibg=#3B3A32
-   hi LineNr          guifg=#BCBCBC guibg=#3B3A32
+   hi LineNr          guifg=#BCBCBC guibg=NONE
    hi NonText         guifg=#75715E
    hi SpecialKey      guifg=#75715E
 else
@@ -227,7 +228,7 @@ if &t_Co > 255
    hi Comment         ctermfg=59
    hi CursorColumn                ctermbg=236
    hi ColorColumn                 ctermbg=236
-   hi LineNr          ctermfg=250 ctermbg=236
+   hi LineNr          ctermfg=250 ctermbg=NONE
    hi NonText         ctermfg=59
 
    hi SpecialKey      ctermfg=59
