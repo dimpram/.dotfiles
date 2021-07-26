@@ -58,7 +58,7 @@ sudo pacman -S --noconfirm --needed \
   xcalib xclip picom \
   libnotify dunst \
   vifm nautilus vlc \
-  openssh unzip scrot \
+  openssh unzip scrot htop \
   firefox \
   rxvt-unicode rofi \
   feh imagemagick \

@@ -24,11 +24,11 @@ while true; do
     fi
 
     # If low and discharging
-    if [ "$last" != "LOW" ] && [ "$status" = "Discharging" ] && \
-       [ $capacity -le $low ]; then
-      dunstify "Battery low: $capacity%"
-      last=LOW
-    fi
+    #if [ "$last" != "LOW" ] && [ "$status" = "Discharging" ] && \
+    #   [ $capacity -le $low ]; then
+    #  dunstify "Battery low: $capacity%"
+    #  last=LOW
+    #fi
 
     # If critical and discharging
     if [ "$status" = "Discharging" ] && [ $capacity -le $critical ]; then
@@ -36,5 +36,5 @@ while true; do
       last=CRITICAL
     fi
   fi
-  sleep 60
+  sleep 100
 done

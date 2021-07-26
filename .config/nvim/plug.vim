@@ -1,8 +1,9 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'tpope/vim-fugitive' " Git wrapper
-Plug 'tpope/vim-rhubarb'  " Git wrapper extension
-Plug 'cohama/lexima.vim'  " Auto close parenthesis with dot dot dot support
+Plug 'tpope/vim-fugitive'     " Git wrapper
+Plug 'tpope/vim-rhubarb'      " Git wrapper extension
+Plug 'cohama/lexima.vim'      " Auto close parenthesis with dot dot dot support
+Plug 'sheerun/vim-polyglot'   " Better syntax highlighting
 
 if has('nvim')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}

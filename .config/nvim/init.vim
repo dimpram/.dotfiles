@@ -37,8 +37,7 @@ if exists('&termguicolors') && exists('&winblend')
   set wildoptions=pum
   set pumblend=5
   " Set theme
-  let g:molokai_original = 1
-  colorscheme monokai
+  " let g:molokai_original = 1
 endif
 
 " -------------------
