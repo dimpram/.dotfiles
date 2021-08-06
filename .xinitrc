@@ -53,5 +53,5 @@ exec ~/.local/bin/battery &
 # (sleep 2 && signal-desktop ) &
 
 # Start window manager
-# exec dwm
-exec bspwm
+exec dwm
+# exec bspwm
