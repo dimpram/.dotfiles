@@ -64,3 +64,11 @@ dkms.conf
 .config/vifm/vifminfo.json
 .local/bin/virtualenv
 .local/bin/flask
+.themes/WhiteSur-dark-hdpi/
+.themes/WhiteSur-dark-solid/
+.themes/WhiteSur-dark-xhdpi/
+.themes/WhiteSur-dark/
+.themes/WhiteSur-light-hdpi/
+.themes/WhiteSur-light-solid/
+.themes/WhiteSur-light-xhdpi/
+.themes/WhiteSur-light/
