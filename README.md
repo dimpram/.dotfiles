@@ -1,15 +1,16 @@
 # ~/.dotfiles
 
-![Desktop preview](preview.png)
+![Desktop preview](https://user-images.githubusercontent.com/44473195/128526740-d3f14861-8431-44c3-a1e4-d821618f46ff.png)
 
-My configuration files for my 2021 Arch Linux rice based around Gruvbox. This configuration runs currently on my Xiaomi MI Air 13.3 2018 global edition and thus the bootstraping script contains some optional optimizations (disable nvidia GPU, screen calibration, drivers, keyboard...) that you can install in case that you have the same laptop.
+
+My configuration files for my 2021 Arch Linux rice which is based around Mac OS Big Sur. This configuration runs currently on my Xiaomi MI Air 13.3 2018 global edition and thus the bootstraping script contains some optional optimizations (disable nvidia GPU, screen calibration, drivers, keyboard...) that you can install in case that you have the same laptop.
 
 ## Programs
 
-+ __WM:__ [dwm](https://dwm.suckless.org/) + fullgaps + actualfullscreen
-+ __Compositor:__ [picom](https://github.com/yshui/picom)
-+ __GTK theme:__ [gruvbox-dark-gtk](https://aur.archlinux.org/packages/gruvbox-dark-gtk)
-+ __Launcher:__ [dmenu](https://tools.suckless.org/dmenu/)
++ __WM:__ [dwm](https://dwm.suckless.org/) + [fullgaps](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff) + [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/dwm-actualfullscreen-20191112-cb3f58a.diff) + [attachbottom](https://dwm.suckless.org/patches/attachbottom/dwm-attachbottom-6.2.diff) + [cfacts](https://dwm.suckless.org/patches/cfacts/dwm-cfacts-6.2-1.diff)
++ __Compositor:__ [ibhagwan/picom (for rounded corners)](https://github.com/ibhagwan/picom)
++ __GTK theme:__ [Custom](https://github.com/dimpram/.dotfiles/tree/master/.themes/oomox-arc-dark)
++ __Launcher:__ [rofi (lr-tech theme modified by me)](https://github.com/lr-tech/rofi-themes-collection#squared-red)
 + __Notifications:__ [dunst](https://dunst-project.org/)
 + __Terminal:__ [urxvt](https://github.com/alacritty/alacritty) + zsh
 + __Editor:__ [vscode OSS](https://code.visualstudio.com/), [neovim-nightly](https://neovim.io/)
