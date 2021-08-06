@@ -28,6 +28,7 @@ SAVEHIST=1000
 export BROWSER="firefox"
 export EDITOR="nvim"
 export PATH="${PATH}:${HOME}/bin:${HOME}/.cabal/bin"
+export GOPATH="$HOME/go"
 
 #-----------------------------
 # Dircolors
@@ -64,7 +65,7 @@ alias vim='nvim'
 alias tree='tree -I 'node_modules' --dirsfirst'
 
 # Custom
-alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fill ~/wals/wallpaper.jpg'
+alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fill ~/wals/mac.jpg'
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'

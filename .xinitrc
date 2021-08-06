@@ -44,13 +44,14 @@ fi
 exec dunst &
 
 # Start picom
-# exec picom &
+exec picom &
 
 # Start battery notification script
 exec ~/.local/bin/battery &
 
 # Open signal
-(sleep 2 && signal-desktop ) &
+# (sleep 2 && signal-desktop ) &
 
 # Start window manager
-exec dwm
+# exec dwm
+exec bspwm
