@@ -9,7 +9,7 @@ My configuration files for my 2021 Arch Linux rice which is based around Mac OS 
 
 + __WM:__ [dwm](https://dwm.suckless.org/) + [fullgaps](https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff) + [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/dwm-actualfullscreen-20191112-cb3f58a.diff) + [attachbottom](https://dwm.suckless.org/patches/attachbottom/dwm-attachbottom-6.2.diff) + [cfacts](https://dwm.suckless.org/patches/cfacts/dwm-cfacts-6.2-1.diff)
 + __Compositor:__ [ibhagwan/picom (for rounded corners)](https://github.com/ibhagwan/picom)
-+ __GTK theme:__ [Custom](https://github.com/dimpram/.dotfiles/tree/master/.themes/oomox-arc-dark)
++ __GTK theme:__ [WhiteSur](https://github.com/vinceliuice/WhiteSur-gtk-theme)
 + __Launcher:__ [rofi (lr-tech theme modified by me)](https://github.com/lr-tech/rofi-themes-collection#squared-red)
 + __Notifications:__ [dunst](https://dunst-project.org/)
 + __Terminal:__ [urxvt](https://github.com/alacritty/alacritty) + zsh
