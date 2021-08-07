@@ -21,7 +21,7 @@ URxvt.internalBorder: 35
 
 ! Colors Monokai
 *.foreground    : #eeffff
-*.background    : #212121
+*.background    : #242424
 *.cursorColor   : #eeffff
 ! *fading         : 35
 *fadeColor      : #404040
@@ -63,5 +63,5 @@ URxvt.internalBorder: 35
 
 ! For transparency composition
 urxvt*depth: 32
-urxvt*background: [85]#212121
+urxvt*background: [90]#242424
 
