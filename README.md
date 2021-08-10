@@ -1,6 +1,7 @@
 # ~/.dotfiles
 
-![Desktop preview](https://user-images.githubusercontent.com/44473195/128526740-d3f14861-8431-44c3-a1e4-d821618f46ff.png)
+![Preview](https://user-images.githubusercontent.com/44473195/128847571-0301a148-1265-4467-b094-a296142948d5.png)
+
 
 
 My configuration files for my 2021 Arch Linux rice which is based around Mac OS Big Sur. This configuration runs currently on my Xiaomi MI Air 13.3 2018 global edition and thus the bootstraping script contains some optional optimizations (disable nvidia GPU, screen calibration, drivers, keyboard...) that you can install in case that you have the same laptop.
