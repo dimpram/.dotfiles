@@ -71,6 +71,7 @@ alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
 alias notes='cd $HOME/dox/cloud_backup/Notes/'
 alias sql='sudo mysql -u root -p'
+alias vifm='vifm .'
 
 #------------------------------
 # Shell Functions
