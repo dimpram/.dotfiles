@@ -19,7 +19,7 @@ URxvt.scrollBar: false
 URxvt.underlineURLs: true
 URxvt.internalBorder: 35
 
-! Colors Monokai
+! Colors
 *.foreground    : #eeffff
 *.background    : #242424
 *.cursorColor   : #eeffff
@@ -65,3 +65,8 @@ URxvt.internalBorder: 35
 urxvt*depth: 32
 urxvt*background: [90]#242424
 
+
+! Extensions
+URxvt.perl-ext-common: default,matcher,resize-font,
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1

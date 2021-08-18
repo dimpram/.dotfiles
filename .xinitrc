@@ -50,7 +50,7 @@ exec picom &
 exec ~/.local/bin/battery &
 
 # Open signal
-# (sleep 2 && signal-desktop ) &
+(sleep 2 && signal-desktop ) &
 
 # Start window manager
 exec dwm

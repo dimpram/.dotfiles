@@ -36,7 +36,7 @@ echo -e "\nInstalling AUR Dependencies\n"
 sudo pacman -S --noconfirm vim base-devel --needed  # Installing base-devel if it's not installed already (This package contains everything required to build from the AUR)
 
 # Build all packages
-for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git simple-mtpfs neovim-nightly-bin bashmount picom-ibhagwan-git
+for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git simple-mtpfs neovim-nightly-bin bashmount picom-ibhagwan-git urxvt-resize-font-git
 do
   if [ ! -d "$HOME/git/$PACKAGE/" ]
   then
