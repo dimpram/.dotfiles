@@ -20,7 +20,7 @@ sudo pacman -Syu --noconfirm
 echo -e "\nStowing Dotfiles\n"
 mkdir -p $HOME/.config                      # Make the config folder so stowing everything doesn't just symlink the folder
 mkdir -p $HOME/.local                       # Make the config folder so stowing everything doesn't just symlink the folder
-rm -f $HOME/.bashrc $HOME/.bash_profile     # Sometimes there's a bashrc or a bash_profile
+# rm -f $HOME/.bashrc $HOME/.bash_profile     # Sometimes there's a bashrc or a bash_profile
 sudo pacman -S stow --noconfirm --needed    # Installing stow
 cd $HOME/git
 stow .dotfiles                              # Stowing the .dotfiles folder
@@ -78,8 +78,8 @@ sudo systemctl enable bluetooth.service         # For Bluetooth service
 sudo systemctl enable tlp.service               # For power management
 
 # Switch to zsh make that a separate script
-chsh -s /usr/bin/zsh
-source $HOME/.zsh
+# chsh -s /usr/bin/zsh
+# source $HOME/.zsh
 
 # Installing development environments
 # Ruby Environment
@@ -130,4 +130,7 @@ startx
 
 # Install pandoc
 # sudo pacman -S pandoc texlive-core ttf-dejavu
+
+# Command for updating git submodules
+# git submodule foreach git pull     
 
