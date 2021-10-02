@@ -36,7 +36,7 @@ echo -e "\nInstalling AUR Dependencies\n"
 sudo pacman -S --noconfirm vim base-devel --needed  # Installing base-devel if it's not installed already (This package contains everything required to build from the AUR)
 
 # Build all packages
-for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git simple-mtpfs neovim-nightly-bin bashmount picom-ibhagwan-git urxvt-resize-font-git
+for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git simple-mtpfs bashmount picom-ibhagwan-git urxvt-resize-font-git nerd-fonts-fira-code
 do
   if [ ! -d "$HOME/git/$PACKAGE/" ]
   then
@@ -62,7 +62,7 @@ sudo pacman -S --noconfirm --needed \
   firefox \
   rxvt-unicode rofi \
   feh imagemagick \
-  acpi alsa-utils pulseaudio pavucontrol tlp \
+  acpi alsa-utils pulseaudio pavucontrol tlp ntfs-3g \
   tldr \
   inkscape \
   libreoffice \
@@ -76,10 +76,6 @@ sudo pacman -S --noconfirm --needed \
 sudo systemctl enable systemd-timesyncd.service # For Time synchronization
 sudo systemctl enable bluetooth.service         # For Bluetooth service
 sudo systemctl enable tlp.service               # For power management
-
-# Switch to zsh make that a separate script
-# chsh -s /usr/bin/zsh
-# source $HOME/.zsh
 
 # Installing development environments
 # Ruby Environment
@@ -103,6 +99,14 @@ cd $HOME
 
 startx
 
+# Post ENV script
+# feh --bg-fill $HOME/wals/mac.jpg
+
+# Switch to zsh make that a separate script
+# chsh -s /usr/bin/zsh
+# source $HOME/.zsh
+
+## Xiaomi optimizations
 # Install intel driver
 # sudo pacman -S xf86-video-intel
 
@@ -128,9 +132,7 @@ startx
 #        Option "XkbOptions" "grp:alt_shift_toggle"
 # EndSection
 
-# Install pandoc
-# sudo pacman -S pandoc texlive-core ttf-dejavu
-
+# Misc
 # Command for updating git submodules
 # git submodule foreach git pull     
 

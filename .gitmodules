@@ -1,6 +1,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = git@github.com:dimpram/NvChad.git
+	url = http://github.com/dimpram/NvChad.git
 [submodule ".local/src/dwm"]
 	path = .local/src/dwm
-	url = git@github.com:dimpram/dwm.git
+	url = http://github.com/dimpram/dwm.git

@@ -72,3 +72,11 @@ dkms.conf
 .themes/WhiteSur-light-solid/
 .themes/WhiteSur-light-xhdpi/
 .themes/WhiteSur-light/
+.local/share/Trash/
+.local/share/gvfs-metadata/
+.local/share/icons/
+.local/share/nautilus/
+.local/share/nvim/
+.local/share/recently-used.xbel
+.local/share/xorg/
+.config/gtk-3.0/bookmarks
