@@ -1,19 +1,82 @@
 #!/bin/sh
-
-# Before executing the script make sure to do the following things while chrooted
+# -----------------------------------------------------------------------------
+# Author: @dimpram
+# Notes:
+#
+# Before executing the script make sure to do the following things while
+# chrooted
 # - Create user
 # - Install network manager and start the service
 # - Install intel microcode  
-
+#
 # Once you've cloned https://github.com/dimpram/.dotfiles.git to
 # $HOME/git/.dotfiles - run this script to install everything else.
+# -----------------------------------------------------------------------------
+
+dependencies=(
+  xf86-video-intel
+  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xorg-xbacklight
+  xcalib xclip
+  libnotify dunst
+  vifm nautilus vlc
+  openssh unzip zip scrot htop
+  firefox
+  android-tools
+  rxvt-unicode rofi
+  feh imagemagick
+  acpi alsa-utils pulseaudio pavucontrol tlp ntfs-3g
+  tldr tree
+  inkscape
+  libreoffice
+  neofetch
+  curl wget
+  zsh zsh-completions zsh-syntax-highlighting
+  bluez bluez-utils
+  signal-desktop
+)
+
+aur=(
+  ttf-merriweather
+  ttf-merriweather-sans
+  ttf-oswald
+  ttf-quintessential
+  ttf-signika 
+  ttf-google-fonts-git
+  simple-mtpfs
+  bashmount
+  picom-ibhagwan-git
+  urxvt-resize-font-git
+  nerd-fonts-fira-code
+)
 
 
-set -e                                      # When any command fails the shell immediately shall exit,
+# build_pkg builds and installs any package that's not from the main arch repo (e.g. AUR, Github etc)
+# $1 : repo domain
+# $2 : package list/array
+# $3 : install command
+build_pkg() {
+  for PACKAGE in $2
+  do
+    if [ ! -d "$HOME/git/$PACKAGE/" ]
+    then
+      echo -e "\nCloning $PACKAGE\n"
+      git clone https://$1/$PACKAGE.git $HOME/git/$PACKAGE
+    fi
+
+    echo -e "\nBuilding $PACKAGE\n"
+
+    cd $HOME/git/$PACKAGE
+    $3
+    cd $HOME/git
+    rm -rf $HOME/git/$PACKAGE
+  done
+}
+
+set -e                                      # When any command fails the shell immediately shall exit
 
 # Updating Arch
 echo -e "\nUpdating Arch\n"
-sudo pacman -Syu --noconfirm
+sudo pacman -Syu --noconfirm 
 
 
 # Stowing
@@ -29,43 +92,12 @@ stow .dotfiles                              # Stowing the .dotfiles folder
 echo -e "\nInstalling AUR Dependencies\n"
 sudo pacman -S --noconfirm vim base-devel --needed  # Installing base-devel if it's not installed already (This package contains everything required to build from the AUR)
 
-# Build all packages
-for PACKAGE in ttf-merriweather ttf-merriweather-sans ttf-oswald ttf-quintessential ttf-signika ttf-google-fonts-git simple-mtpfs bashmount picom-ibhagwan-git urxvt-resize-font-git nerd-fonts-fira-code
-do
-  if [ ! -d "$HOME/git/$PACKAGE/" ]
-  then
-    echo -e "\nCloning $PACKAGE\n"
-    git clone https://aur.archlinux.org/$PACKAGE.git $HOME/git/$PACKAGE
-  fi
-
-  echo -e "\nBuilding $PACKAGE\n"
-
-  cd $HOME/git/$PACKAGE
-  makepkg -si --noconfirm
-done
+# Build aur packages
+build_pkg "aur.archlinux.org" $aur "makepkg -si --noconfirm"
 
 # Installing packages/dependencies
 echo -e "\nInstalling Dependencies\n"
-sudo pacman -S --noconfirm --needed \
-  xf86-video-intel \
-  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xorg-xbacklight \
-  xcalib xclip \
-  libnotify dunst \
-  vifm nautilus vlc \
-  openssh unzip zip scrot htop \
-  firefox \
-  android-tools \
-  rxvt-unicode rofi \
-  feh imagemagick \
-  acpi alsa-utils pulseaudio pavucontrol tlp ntfs-3g \
-  tldr tree \
-  inkscape \
-  libreoffice \
-  neofetch \
-  curl wget \
-  zsh zsh-completions zsh-syntax-highlighting \
-  bluez bluez-utils \
-  signal-desktop
+sudo pacman -S --noconfirm --needed $dependencies
 
 # Enabling services
 sudo systemctl enable systemd-timesyncd.service # For Time synchronization
@@ -74,19 +106,7 @@ sudo systemctl enable tlp.service               # For power management
 
 # Installing development environments
 # Ruby Environment
-for PACKAGE in rbenv ruby-build
-do
-  if [ ! -d "$HOME/git/$PACKAGE/" ]
-  then
-    echo -e "\nCloning $PACKAGE\n"
-    git clone https://aur.archlinux.org/$PACKAGE.git $HOME/git/$PACKAGE
-  fi
-
-  echo -e "\nBuilding $PACKAGE\n"
-
-  cd $HOME/git/$PACKAGE
-  makepkg -si --noconfirm
-done
+build_pkg "aur.archlinux.org" "rbenv ruby-build" "makepkg -si --noconfirm"
 rbenv init 
 
 # Install Golang
@@ -97,6 +117,9 @@ mkdir -p ~/go/src
 # Installing nvim config
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c ":PlugInstall"
+
+# Install MacOS WhiteSur theme + WhiteSur icons
+build_pkg "github.com" "vinceliuice/WhiteSur-gtk-theme vinceliuice/WhiteSur-icon-theme" "/install.sh"
 
 # Return home so new shells open at home
 cd $HOME
