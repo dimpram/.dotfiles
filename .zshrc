@@ -29,6 +29,7 @@ export BROWSER="firefox"
 export EDITOR="nvim"
 export PATH="${PATH}:${HOME}/bin:${HOME}/.cabal/bin"
 export GOPATH="$HOME/go"
+export CHROME_EXECUTABLE=/usr/bin/chromium
 
 #-----------------------------
 # Dircolors
@@ -69,7 +70,7 @@ alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fil
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
-alias notes='cd $HOME/dox/cloud_backup/Notes/'
+alias notes='cd $HOME/dox/notes/'
 alias sql='sudo mysql -u root -p'
 alias vifm='vifm .'
 

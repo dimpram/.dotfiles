@@ -44,7 +44,7 @@ fi
 exec dunst &
 
 # Start picom
-exec picom &
+# exec picom &
 
 # Start battery notification script
 exec ~/.local/bin/battery &

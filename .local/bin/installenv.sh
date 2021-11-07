@@ -5,7 +5,7 @@
 # - Install network manager and start the service
 # - Install intel microcode  
 
-# Once you've cloned https://github.com/jimDragon/.dotfiles.git to
+# Once you've cloned https://github.com/dimpram/.dotfiles.git to
 # $HOME/git/.dotfiles - run this script to install everything else.
 
 
@@ -25,13 +25,7 @@ sudo pacman -S stow --noconfirm --needed    # Installing stow
 cd $HOME/git
 stow .dotfiles                              # Stowing the .dotfiles folder
 
-# Creating filesystem
-for dir in dox dls cell tmp
-do
-  mkdir -p $HOME/$dir
-done
-
-# Installing AUR Dependencies CHECK IF I NEED THIS
+# Installing AUR Dependencies
 echo -e "\nInstalling AUR Dependencies\n"
 sudo pacman -S --noconfirm vim base-devel --needed  # Installing base-devel if it's not installed already (This package contains everything required to build from the AUR)
 
@@ -58,12 +52,13 @@ sudo pacman -S --noconfirm --needed \
   xcalib xclip \
   libnotify dunst \
   vifm nautilus vlc \
-  openssh unzip scrot htop \
+  openssh unzip zip scrot htop \
   firefox \
+  android-tools \
   rxvt-unicode rofi \
   feh imagemagick \
   acpi alsa-utils pulseaudio pavucontrol tlp ntfs-3g \
-  tldr \
+  tldr tree \
   inkscape \
   libreoffice \
   neofetch \
@@ -93,6 +88,15 @@ do
   makepkg -si --noconfirm
 done
 rbenv init 
+
+# Install Golang
+echo -e "\Installing Golang\n"
+sudo pacman -S --noconfirm --needed go go-tools
+mkdir -p ~/go/src
+
+# Installing nvim config
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim -c ":PlugInstall"
 
 # Return home so new shells open at home
 cd $HOME

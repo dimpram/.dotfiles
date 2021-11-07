@@ -19,4 +19,8 @@
 .local/share/nvim/
 .local/share/recently-used.xbel
 .local/share/xorg/
+.local/share/Google/
+.local/share/mime/
+.local/share/vifm/
+.local/share/vlc/
 .config/gtk-3.0/bookmarks
