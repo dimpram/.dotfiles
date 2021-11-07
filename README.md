@@ -14,7 +14,7 @@ My configuration files for my 2021 Arch Linux rice which is based around Mac OS 
 + __Launcher:__ [rofi (spotlight dark LR-tech theme)](https://github.com/lr-tech/rofi-themes-collection#squared-red)
 + __Notifications:__ [dunst](https://dunst-project.org/)
 + __Terminal:__ [urxvt](https://wiki.archlinux.org/title/Rxvt-unicode) + zsh
-+ __Editor:__ [NvChad](https://github.com/dimpram/NvChad), [vscode](https://code.visualstudio.com/)
++ __Editor:__ [nvim](https://github.com/dimpram/.dotfiles/tree/master/.config/nvim), [vscode](https://code.visualstudio.com/)
 + __Image Viewer:__ [feh](https://feh.finalrewind.org/)
 + __File Manager:__ [vifm](https://vifm.info/)
 + __Browser:__ [firefox](https://www.mozilla.org/en-US/firefox/new/)
