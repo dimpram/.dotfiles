@@ -1,4 +1,4 @@
-# ~/.dotfiles
+# ~/.dotfiles [WIP]
 
 ![Preview](https://user-images.githubusercontent.com/44473195/128847571-0301a148-1265-4467-b094-a296142948d5.png)
 
@@ -23,38 +23,25 @@ My configuration files for my 2021 Arch Linux rice which is based around Mac OS 
 
 ## Getting Started
 
-In order to set up this rice you need to install Arch Linux and create a user. This can be done by following [the Arch Wiki](https://wiki.archlinux.org/index.php/Installation_guide).
-
-Note: the automatic bootstrap script uses `sudo`, so you'll need to ensure your user is apart of the `wheel` group.
-
-After installing everything and creating your user, clone the `.dotfiles` repo to `~/git/.dotfiles`.
+First clone the repo.
 ```
-mkdir -p ~/git
-git clone https://github.com/jimDragon/.dotfiles.git ~/git/.dotfiles
+$ git clone --recurse-submodules https://github.com/dimpram/dotfiles.git ~/git/.dotfiles
 ```
 
-After cloning the respository run the bootstrap script and follow the prompts.
+After cloning the respository, update the submodules.
 ```
-~/git/.dotfiles/.local/bin/installenv.sh
+$ cd ~/git/.dotfiles && git submodule update --remote --merge
+```
+
+Finally, run the setup script.
+```
+# ./setup.sh
 ```
 
 Once this script completes you'll be loaded into my build of dwm window manager with everything configured according to my configs (and preferences).
 
-### Manual
-
-If you don't want to use the automatic script, symlink all the files to your home directory using the command `stow`.
-```
-cd ~/git
-stow .dotfiles
-```
-Now that the config files are stowed, the environment should mostly be up and running.
-
-
-#### Dependencies
-There are various dependencies that are required to get this rice working perfectly. Most are in the Arch repos but you will need to install some stuff form the AUR. If you're setting this rice up on another distro just install the same applications with the equivalent commands.
-
-Note: if you're using the automatic script you don't have to worry about installing these manually. You can modify the script and make your own bootstrap script pretty easily :)
-
 ## Notes
 
-I decided to remove GTK Gruvbox theme because the way i had it setup wasn't very clean. It's up to you know to enable a GTK theme of your choice :)
+In order to set up this rice you need to install Arch Linux and create a user. This can be done by following [the Arch Wiki](https://wiki.archlinux.org/index.php/Installation_guide).
+
+The automatic bootstrap script uses `sudo`, so you'll need to ensure your user is apart of the `wheel` group.
