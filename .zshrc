@@ -27,7 +27,6 @@ SAVEHIST=1000
 #------------------------------
 export BROWSER="firefox"
 export EDITOR="nvim"
-export PATH="${PATH}:${HOME}/bin:${HOME}/.cabal/bin"
 export GOPATH="$HOME/go"
 export CHROME_EXECUTABLE=/usr/bin/chromium
 
@@ -58,8 +57,7 @@ bindkey "^[[F" end-of-line
 #------------------------------
 alias ls='ls --color=auto --group-directories-first'
 alias l='ls -lh'
-alias la='ls -ah'
-alias lla='ls -lah'
+alias la='ls -lah'
 alias grep='grep --color'
 alias net='nmtui'
 alias vim='nvim'
@@ -72,7 +70,9 @@ alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
 alias notes='cd $HOME/dox/notes/'
 alias sql='sudo mysql -u root -p'
+alias psql='sudo -iu postgres'
 alias vifm='vifm .'
+alias dot9='cd ~/git/dot9/ && code . && exit'
 
 #------------------------------
 # Shell Functions
@@ -142,23 +142,8 @@ zstyle ':vcs_info:git*' formats "%{${fg[white]}%}[%{${fg[green]}%}%s%{${fg[white
 
 setopt prompt_subst
 
-if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then 
-  p_host='%F{yellow}%M%f'
-else
-  p_host='%F{none}%M%f'
-fi
-
-PS1=${(j::Q)${(Z:Cn:):-$'
-  ${p_host}
-  %F{white}%~%f
-  %(!.%F{red}%#%f.%F{none}%#%f)
-  " "
-'}}
-
+PS1='> '
 PS2=$'%_>'
-RPROMPT=$'${vcs_info_msg_0_}'
-#RPROMPT=\$vcs_info_msg_0_
-
-# vim: set ts=2 sw=2 et:
+RPROMPT=%1/$'${vcs_info_msg_0_}'
 
 date

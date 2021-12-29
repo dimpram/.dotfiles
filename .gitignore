@@ -24,3 +24,8 @@
 .local/share/vifm/
 .local/share/vlc/
 .config/gtk-3.0/bookmarks
+.local/bin/pgweb_linux_386
+.local/share/applications/
+.local/share/heroku/
+.local/share/keyrings/
+.local/share/pgadmin4*

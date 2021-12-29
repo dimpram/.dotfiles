@@ -18,6 +18,8 @@ URxvt.font: xft:FiraCode Nerd Font Mono:size=14
 URxvt.scrollBar: false
 URxvt.underlineURLs: true
 URxvt.internalBorder: 35
+URxvt.cursorBlink: 1
+URxvt.cursorUnderline: 1
 
 ! Colors
 *.foreground    : #eeffff

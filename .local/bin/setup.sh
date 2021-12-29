@@ -33,6 +33,7 @@ dependencies=(
   zsh zsh-completions zsh-syntax-highlighting
   bluez bluez-utils
   signal-desktop
+  yay
 )
 
 aur=(
@@ -135,7 +136,7 @@ cd $HOME
 
 startx
 
-# Post ENV script
+# Post Installation
 # feh --bg-fill $HOME/wals/mac.jpg
 
 # Switch to zsh make that a separate script
@@ -143,10 +144,10 @@ startx
 # source $HOME/.zsh
 
 ## Xiaomi optimizations
-# Install intel driver
-# sudo pacman -S xf86-video-intel
 
-# Blacklist nvidia kernel modules
+# Install intel driver and disable nvdia
+
+# sudo pacman -S xf86-video-intel bbswitch xf86-video-nouveau
 # sudo zsh -c "echo -e 'blacklist nouveau\nblacklist nvidia' > /etc/modprobe.d/nouveau.conf"
 # install bbswitch to turn of the second nvidia gpu
 # sudo zsh -c "echo -e 'options bbswitch load_state=0' > /etc/modprobe.d/bbswitch.conf"
