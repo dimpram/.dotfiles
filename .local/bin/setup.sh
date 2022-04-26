@@ -84,7 +84,6 @@ sudo pacman -Syu --noconfirm
 echo -e "\nStowing Dotfiles\n"
 mkdir -p $HOME/.config                      # Make the config folder so stowing everything doesn't just symlink the folder
 mkdir -p $HOME/.local                       # Make the config folder so stowing everything doesn't just symlink the folder
-# rm -f $HOME/.bashrc $HOME/.bash_profile     # Sometimes there's a bashrc or a bash_profile
 sudo pacman -S stow --noconfirm --needed    # Installing stow
 cd $HOME/git
 stow .dotfiles                              # Stowing the .dotfiles folder
@@ -131,15 +130,14 @@ vim -c ":PlugInstall"
 echo -e "\Installing WhiteSur theme\n"
 build_pkg "github.com" "vinceliuice/WhiteSur-gtk-theme vinceliuice/WhiteSur-icon-theme" "/install.sh"
 
-# Return home so new shells open at home
-cd $HOME
-
-startx
+cd $HOME                                    # Return home so new shells open at home
+startx                                      # Start xserver
 
 # Post Installation
 # feh --bg-fill $HOME/wals/mac.jpg
 
 # Switch to zsh make that a separate script
+# rm -f $HOME/.bashrc $HOME/.bash_profile     # Sometimes there's a bashrc or a bash_profile
 # chsh -s /usr/bin/zsh
 # source $HOME/.zsh
 
