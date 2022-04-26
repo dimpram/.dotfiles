@@ -15,7 +15,7 @@
 
 dependencies=(
   xf86-video-intel
-  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama xorg-xbacklight
+  xorg-server xorg-xinit xorg-xrandr xorg-xsetroot libx11 libxft libxinerama light
   xcalib xclip
   libnotify dunst
   vifm nautilus vlc
@@ -33,10 +33,10 @@ dependencies=(
   zsh zsh-completions zsh-syntax-highlighting
   bluez bluez-utils
   signal-desktop
-  yay
 )
 
 aur=(
+  yay
   ttf-merriweather
   ttf-merriweather-sans
   ttf-oswald
@@ -147,11 +147,7 @@ startx
 
 # Install intel driver and disable nvdia
 
-# sudo pacman -S xf86-video-intel bbswitch xf86-video-nouveau
-# sudo zsh -c "echo -e 'blacklist nouveau\nblacklist nvidia' > /etc/modprobe.d/nouveau.conf"
-# install bbswitch to turn of the second nvidia gpu
-# sudo zsh -c "echo -e 'options bbswitch load_state=0' > /etc/modprobe.d/bbswitch.conf"
-# sudo zsh -c "echo -e 'bbswitch' > /etc/modules-load.d/bbswitch.conf"
+# Read this: https://github.com/Askannz/optimus-manager
 
 # Configure touchpad
 # sudo pacman -S xf86-input-libinput

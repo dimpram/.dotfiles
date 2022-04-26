@@ -33,6 +33,10 @@ fi
 
 # END DEFUALT xinitrc stuff
 
+# Load nvidia optimus
+/usr/bin/prime-offload
+
+#/usr/bin/prime-switch
 
 # Load wallpaper
 ~/.fehbg &

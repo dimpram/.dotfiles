@@ -64,15 +64,17 @@ alias vim='nvim'
 alias tree='tree -I 'node_modules' --dirsfirst'
 
 # Custom
-alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fill ~/wals/mac.jpg'
+# alias scr='xrandr --output HDMI2 --mode 1920x1200 --left-of eDP1 && feh --bg-fill ~/wals/mac.jpg'
+alias scr='xrandr --output HDMI-2 --mode 1920x1200 --left-of eDP-1 && feh --bg-fill ~/wals/mac.jpg'
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
-alias notes='cd $HOME/dox/notes/'
+alias notes='cd $HOME/dox/notes/ && vim'
 alias sql='sudo mysql -u root -p'
 alias psql='sudo -iu postgres'
 alias vifm='vifm .'
 alias dot9='cd ~/git/dot9/ && code . && exit'
+alias gfx='optimus-manager --print-mode'
 
 #------------------------------
 # Shell Functions
@@ -142,8 +144,8 @@ zstyle ':vcs_info:git*' formats "%{${fg[white]}%}[%{${fg[green]}%}%s%{${fg[white
 
 setopt prompt_subst
 
-PS1='> '
+PS1='%n@%M %1~ > '
 PS2=$'%_>'
-RPROMPT=%1/$'${vcs_info_msg_0_}'
+RPROMPT=$'${vcs_info_msg_0_}'
 
 date
