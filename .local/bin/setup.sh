@@ -31,7 +31,7 @@ dependencies=(
   neofetch
   curl wget
   zsh zsh-completions zsh-syntax-highlighting
-  bluez bluez-utils
+  bluez bluez-utils blueman
   signal-desktop
 )
 
