@@ -49,4 +49,4 @@
 .local/bin/sqlformat
 .local/share/jupyter/
 .local/share/man/
-
+.local/share/fonts/

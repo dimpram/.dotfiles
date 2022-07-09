@@ -160,7 +160,9 @@ startx                                      # Start xserver
 #        Option "XkbLayout" "us,gr"
 #        Option "XkbModel" "pc105"
 #        # Option "XkbVariant"
-#        Option "XkbOptions" "grp:alt_shift_toggle"
+#        Option "XkbOptions" "grp:alt_shift_toggle" 
+         # or use the right control for changing the language
+#        Option "XkbOptions" "grp:rctrl_toggle" 
 # EndSection
 
 # Misc

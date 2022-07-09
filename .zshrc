@@ -144,7 +144,7 @@ zstyle ':vcs_info:git*' formats "%{${fg[white]}%}[%{${fg[green]}%}%s%{${fg[white
 
 setopt prompt_subst
 
-PS1='%n@%M %1~ > '
+PS1='%M %1~ > '
 PS2=$'%_>'
 RPROMPT=$'${vcs_info_msg_0_}'
 
