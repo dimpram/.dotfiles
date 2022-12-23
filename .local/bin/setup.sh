@@ -33,6 +33,7 @@ dependencies=(
   zsh zsh-completions zsh-syntax-highlighting
   bluez bluez-utils blueman
   signal-desktop
+  pacman-contrib
 )
 
 aur=(
@@ -109,12 +110,13 @@ echo -e "\Enabling services\n"
 sudo systemctl enable systemd-timesyncd.service # For Time synchronization
 sudo systemctl enable bluetooth.service         # For Bluetooth service
 sudo systemctl enable tlp.service               # For power management
+sudo systemctl enable paccache.timer            # For automatically cleaning package cache
 
 # Install development environments
 # Ruby
-echo -e "\Installing Ruby\n"
-build_pkg "aur.archlinux.org" "rbenv ruby-build" "makepkg -si --noconfirm"
-rbenv init 
+# echo -e "\Installing Ruby\n"
+# build_pkg "aur.archlinux.org" "rbenv ruby-build" "makepkg -si --noconfirm"
+# rbenv init 
 
 # Golang
 echo -e "\Installing Golang\n"
@@ -127,14 +129,16 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.g
 vim -c ":PlugInstall"
 
 # Install MacOS WhiteSur theme + WhiteSur icons
-echo -e "\Installing WhiteSur theme\n"
-build_pkg "github.com" "vinceliuice/WhiteSur-gtk-theme vinceliuice/WhiteSur-icon-theme" "/install.sh"
+# echo -e "\Installing WhiteSur theme\n"
+# build_pkg "github.com" "vinceliuice/WhiteSur-gtk-theme vinceliuice/WhiteSur-icon-theme" "/install.sh"
+
+echo -e "\DONE!\n"
 
 cd $HOME                                    # Return home so new shells open at home
 startx                                      # Start xserver
 
 # Post Installation
-# feh --bg-fill $HOME/wals/mac.jpg
+# feh --bg-fill $HOME/wallpapers/mac.jpg
 
 # Switch to zsh make that a separate script
 # rm -f $HOME/.bashrc $HOME/.bash_profile     # Sometimes there's a bashrc or a bash_profile
@@ -169,3 +173,5 @@ startx                                      # Start xserver
 # Command for updating git submodules
 # git submodule foreach git pull     
 
+
+# Setup media mountpoints for drivers

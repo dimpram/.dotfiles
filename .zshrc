@@ -27,8 +27,9 @@ SAVEHIST=1000
 #------------------------------
 export BROWSER="firefox"
 export EDITOR="nvim"
-export GOPATH="$HOME/go"
+export GOPATH="$HOME/tools/go"
 export CHROME_EXECUTABLE=/usr/bin/chromium
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 #-----------------------------
 # Dircolors
@@ -64,17 +65,16 @@ alias vim='nvim'
 alias tree='tree -I 'node_modules' --dirsfirst'
 
 # Custom
-alias scr-main='xrandr --output HDMI-2 --mode 1920x1080 --right-of eDP-1 && feh --bg-fill ~/wals/mac.jpg'
-alias scr-chania='xrandr --output HDMI-2 --mode 1920x1200 --left-of eDP-1 && feh --bg-fill ~/wals/mac.jpg'
+alias scr-main='xrandr --output HDMI-2 --mode 1920x1080 --right-of eDP-1 && feh --bg-fill ~/wallpapers/chill.png'
+alias scr-chania='xrandr --output HDMI-2 --mode 1920x1200 --left-of eDP-1 && feh --bg-fill ~/wallpapers/chill.png'
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
-alias notes='cd $HOME/dox/notes/ && vim'
+alias notes='cd $HOME/documents/notes/ && vim'
 alias sql='sudo mysql -u root -p'
-alias psql='sudo -iu postgres'
 alias vifm='vifm .'
-alias dot9='cd ~/git/dot9/ && code . && exit'
 alias gfx='optimus-manager --print-mode'
+alias coachgarden='code $HOME/git/dot9/coachgarden/ && exit'
 
 #------------------------------
 # Shell Functions
