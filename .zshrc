@@ -65,8 +65,8 @@ alias vim='nvim'
 alias tree='tree -I 'node_modules' --dirsfirst'
 
 # Custom
-alias scr-main='xrandr --output HDMI-2 --mode 1920x1080 --right-of eDP-1 && feh --bg-fill ~/wallpapers/chill.png'
-alias scr-chania='xrandr --output HDMI-2 --mode 1920x1200 --left-of eDP-1 && feh --bg-fill ~/wallpapers/chill.png'
+alias scr-main='xrandr --output HDMI-2 --mode 1920x1080 --right-of eDP-1 && feh --bg-fill ~/wallpapers/gruv.jpg'
+alias scr-chania='xrandr --output HDMI-2 --mode 1920x1200 --left-of eDP-1 && feh --bg-fill ~/wallpapers/gruv.jpg'
 alias dots='cd $HOME/git/.dotfiles/ && ls -la && git status'
 alias weather='curl wttr.in/CFU'
 alias mntphone='simple-mtpfs --device 1 cell/'
@@ -75,6 +75,7 @@ alias sql='sudo mysql -u root -p'
 alias vifm='vifm .'
 alias gfx='optimus-manager --print-mode'
 alias coachgarden='code $HOME/git/dot9/coachgarden/ && exit'
+alias thesis='code $HOME/documents/university/thesis/respawn-app && exit'
 
 #------------------------------
 # Shell Functions

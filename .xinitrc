@@ -53,8 +53,5 @@ exec picom &
 # Start battery notification script
 exec ~/.local/bin/battery &
 
-# Open applications
-(sleep 2 && signal-desktop && thunderbird) &
-
 # Start window manager
 exec dwm

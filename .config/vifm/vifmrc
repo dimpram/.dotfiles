@@ -19,8 +19,6 @@ set undolevels=100 " Maximum number of changes that can be undone.
 set vimhelp
 set norunexec     " If you would like to run an executable file when you press return on the file name set this.
 
-colorscheme Default
-
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
 " See man date or man strftime for details.
