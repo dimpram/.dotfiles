@@ -1,7 +1,5 @@
 .config/nvim/plugged/
-.config/vifm/scripts/
-.config/vifm/vifm-help.txt
-.config/vifm/vifminfo.json
+.config/vifm*
 .local/bin/virtualenv
 .local/bin/flask
 .themes/WhiteSur-dark-hdpi/
@@ -19,6 +17,7 @@
 .local/share/nvim/
 .local/share/recently-used.xbel
 .local/share/xorg/
+.local/share/Android*
 .local/share/Google/
 .local/share/mime/
 .local/share/vifm/
