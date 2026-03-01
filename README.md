@@ -19,5 +19,5 @@ currently used on xiaomi mi air 13.3" 2018 & thinkpad x230
 Run this command to download and run the installation script
 
 ```
-curl https://raw.githubusercontent.com/dimpram/.dotfiles/refs/heads/main/.local/bin/config-init | bash
+curl https://raw.githubusercontent.com/dimpram/.dotfiles/refs/heads/main/.local/bin/install | bash
 ```
