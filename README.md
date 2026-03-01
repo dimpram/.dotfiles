@@ -13,3 +13,11 @@ currently used on xiaomi mi air 13.3" 2018 & thinkpad x230
 + __file manager:__ [lf](https://github.com/gokcehan/lf)
 + __power:__ [tlp](https://wiki.archlinux.org/index.php/TLP)
 + __hardware:__ [bashmount](https://github.com/jamielinux/bashmount)
+
+**installation**
+
+Run this command to download and run the installation script
+
+```
+curl https://raw.githubusercontent.com/dimpram/.dotfiles/refs/heads/main/.local/bin/config-init | bash
+```
