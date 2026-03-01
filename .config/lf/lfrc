@@ -1,0 +1,20 @@
+# -----------------------------------------------------------------------------
+# UI & Behavior
+# -----------------------------------------------------------------------------
+set hidden false          # Show hidden files by default
+set icons false           # No icons (pure text is cleaner)
+set scrolloff 5           # Keep 5 lines context when scrolling
+set info size
+
+# -----------------------------------------------------------------------------
+# The B&W Aesthetic
+# -----------------------------------------------------------------------------
+# 'reverse' swaps foreground and background (creating a white block)
+# 'bold' makes the text brighter white
+
+# The status bar at the bottom
+set info_fmt "\033[7m %f \033[0m"  
+
+# The currently selected file (The cursor)
+# We make it a solid white block with black text
+set cursorpreviewfmt "\033[7m"
