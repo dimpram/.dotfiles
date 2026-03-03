@@ -1,5 +1,5 @@
 -- ==============================================================================
--- 1. BASIC SETTINGS
+-- BASIC SETTINGS
 -- ==============================================================================
 vim.g.mapleader = " " -- Set leader key to Space
 vim.opt.number = true -- Show line numbers
@@ -13,9 +13,22 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.updatetime = 50
+vim.opt.clipboard = "unnamedplus" -- Sync Neovim clipboard with OS clipboard
 
 -- ==============================================================================
--- 2. BOOTSTRAP LAZY.NVIM (Plugin Manager)
+-- CUSTOM KEYMAPS FOR WINDOW NAVIGATION
+-- ==============================================================================
+-- Move between panes seamlessly
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
+
+-- Clear search highlights when pressing Escape
+vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
+
+-- ==============================================================================
+-- BOOTSTRAP LAZY.NVIM (Plugin Manager)
 -- ==============================================================================
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -235,14 +248,5 @@ require("lazy").setup({
       highlight = { enable = true },
       indent = { enable = true },
     },
-  },
-  -- Colorscheme (Catppuccin)
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme("catppuccin-mocha")
-    end,
   },
 })

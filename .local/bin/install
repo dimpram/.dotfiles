@@ -10,7 +10,7 @@ sudo -v
 
 # Define required packages
 PACKAGES=(
-    nvim base-devel wayland wlroots wayland-protocols pango libxkbcommon libinput
+    nvim base-devel wayland wlroots wayland-protocols pango libxkbcommon libinput wl-clipboard
     pipewire pipewire-pulse wireplumber
     mako libnotify bemenu-wayland
     lf ttf-jetbrains-mono
