@@ -3,5 +3,6 @@
 battery=$(cat /sys/class/power_supply/BAT0/capacity)
 time=$(date  +"%H:%M")
 date=$(date +%d/%m/%Y)
+volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')
 
-notify-send "$time  $date  $battery%"
+notify-send "$time  $date  b_$battery% v_$volume%"

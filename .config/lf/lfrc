@@ -13,7 +13,7 @@ set info size
 # 'bold' makes the text brighter white
 
 # The status bar at the bottom
-set info_fmt "\033[7m %f \033[0m"  
+# set info_fmt "\033[7m %f \033[0m"  
 
 # The currently selected file (The cursor)
 # We make it a solid white block with black text
