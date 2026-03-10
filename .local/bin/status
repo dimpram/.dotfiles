@@ -5,4 +5,4 @@ time=$(date  +"%H:%M")
 date=$(date +%d/%m/%Y)
 volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')
 
-notify-send "$time  $date  b_$battery% v_$volume%"
+notify-send "$time  $date v$volume b$battery%"
