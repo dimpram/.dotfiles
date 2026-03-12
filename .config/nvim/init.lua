@@ -28,6 +28,48 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- ==============================================================================
+-- VS CODE-STYLE TERMINAL TOGGLE
+-- ==============================================================================
+local term_buf = nil
+local term_win = nil
+
+function ToggleTerminal()
+  -- If the terminal window is open, close it (hide it)
+  if term_win and vim.api.nvim_win_is_valid(term_win) then
+    vim.api.nvim_win_close(term_win, true)
+    term_win = nil
+  else
+    -- Open a new horizontal split at the bottom (15 lines high)
+    vim.cmd("botright 15split")
+    term_win = vim.api.nvim_get_current_win()
+
+    -- If the terminal buffer already exists, load it
+    if term_buf and vim.api.nvim_buf_is_valid(term_buf) then
+      vim.api.nvim_win_set_buf(term_win, term_buf)
+    else
+      -- Otherwise, start a fresh terminal
+      vim.cmd("term")
+      term_buf = vim.api.nvim_get_current_buf()
+      -- Hide line numbers and prevent it from showing up in Telescope buffers
+      vim.opt_local.number = false
+      vim.opt_local.relativenumber = false
+      vim.opt_local.buflisted = false
+    end
+
+    -- Automatically jump into insert mode so you can type immediately
+    vim.cmd("startinsert")
+  end
+end
+
+-- Keybinds: Works in Normal mode ("n") and Terminal mode ("t")
+-- Maps Ctrl + Backtick (VS Code default) and Ctrl + \ as a backup
+vim.keymap.set({"n", "t"}, "<C-`>", "<Cmd>lua ToggleTerminal()<CR>", { desc = "Toggle Terminal" })
+vim.keymap.set({"n", "t"}, "<C-\\>", "<Cmd>lua ToggleTerminal()<CR>", { desc = "Toggle Terminal" })
+
+-- Keep the Escape keymap from earlier so you can easily exit Terminal Mode
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal insert mode" })
+
+-- ==============================================================================
 -- BOOTSTRAP LAZY.NVIM (Plugin Manager)
 -- ==============================================================================
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

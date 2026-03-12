@@ -31,6 +31,7 @@ alias la='ls -lah'
 alias grep='grep --color=auto'
 alias lf=lfcd
 alias vim=nvim
+alias notes="firefox https://app.standardnotes.com/"
 
 # PROMPT
 PS1='[\u@\h \W]\$ '

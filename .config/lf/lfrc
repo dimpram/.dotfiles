@@ -5,6 +5,7 @@ set hidden false          # Show hidden files by default
 set icons false           # No icons (pure text is cleaner)
 set scrolloff 5           # Keep 5 lines context when scrolling
 set info size
+set previewer ~/.config/lf/preview.sh
 
 # -----------------------------------------------------------------------------
 # The B&W Aesthetic
