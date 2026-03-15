@@ -8,5 +8,5 @@
 
 # Auto-start dwl on TTY1 only
 if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-    exec ~/.local/bin/startw
+    exec ~/.local/scripts/startw
 fi
