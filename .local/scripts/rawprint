@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# 1. Check if the user provided BOTH an image file and an IP address
+if [ "$#" -ne 2 ]; then
+    echo "Error: Missing arguments."
+    echo "Usage: ./rawprint <path_to_photo.jpg> <printer_ip>"
+    echo "Example: ./rawprint photo.jpg 192.168.223.1"
+    exit 1
+fi
+
+INPUT_FILE="$1"
+PRINTER_IP="$2"
+PRINTER_PORT="9100"
+
+# The temporary formatted file
+PREVIEW_FILE="/tmp/print_preview_10x15.jpg"
+
+echo "Formatting '$INPUT_FILE' for a 10x15 cm raw layout..."
+
+# 2. Process the image (Resize, center crop, and set to 300 DPI for high quality)
+convert "$INPUT_FILE" -resize 1181x1772^ -gravity center -extent 1181x1772 -density 300 -units PixelsPerInch "$PREVIEW_FILE"
+
+echo "Opening preview..."
+
+# 3. Open the image using the default Linux image viewer
+xdg-open "$PREVIEW_FILE" 2>/dev/null &
+
+# 4. Wait for user confirmation
+echo ""
+echo "Printing via ncat to $PRINTER_IP"
+read -p "Ok to print now? (y/n): " confirm
+
+if [[ "$confirm" =~ ^[Yy]$ ]]; then
+    echo "Sending raw JPG directly to $PRINTER_IP on port $PRINTER_PORT..."
+    
+    # 5. Print using ncat (Feeding the raw JPG file into Port 9100)
+    ncat "$PRINTER_IP" "$PRINTER_PORT" < "$PREVIEW_FILE"
+    
+    echo "Job sent! Check the printer at $PRINTER_IP."
+else
+    echo "Print cancelled. The preview file is saved at $PREVIEW_FILE."
+fi

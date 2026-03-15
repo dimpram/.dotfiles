@@ -6,7 +6,8 @@
 [[ $- != *i* ]] && return
 
 # ENV
-export PATH="$HOME/.local/bin:$PATH"
+export GOPATH="$HOME/tools/go"
+export PATH="$HOME/.local/scripts:$GOPATH/bin:$PATH"
 export EDITOR=nvim
 
 # COMMANDS
