@@ -1,0 +1,7 @@
+#!/bin/sh
+
+(sleep 1; mako) &
+
+~/.local/scripts/battery &
+
+exec dwl
