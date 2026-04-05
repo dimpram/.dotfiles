@@ -6,6 +6,8 @@ margin=20
 padding=15
 border-size=2
 border-radius=0
+on-button-left=dismiss
+on-button-right=invoke-default-action
 
 # Black & White colors
 background-color=#000000
