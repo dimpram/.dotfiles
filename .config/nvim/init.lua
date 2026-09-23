@@ -11,7 +11,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.termguicolors = true
+vim.opt.termguicolors = false
 vim.opt.updatetime = 50
 vim.opt.clipboard = "unnamedplus" -- Sync Neovim clipboard with OS clipboard
 
