@@ -1,0 +1,21 @@
+[Default Applications]
+x-scheme-handler/mailto=userapp-Thunderbird-KBESL3.desktop
+message/rfc822=userapp-Thunderbird-KBESL3.desktop
+x-scheme-handler/mid=userapp-Thunderbird-KBESL3.desktop
+image/jpeg=imv-dir.desktop
+image/png=imv-dir.desktop
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-RRT0S3.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+text/html=firefox.desktop
+application/pdf=firefox.desktop
+text/markdown=nvim.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-KBESL3.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-KBESL3.desktop;
+image/jpeg=imv-dir.desktop;
+image/png=imv-dir.desktop;
+x-scheme-handler/net.thunderbird=userapp-Thunderbird-RRT0S3.desktop;
+application/pdf=firefox.desktop;
+text/markdown=nvim.desktop;
